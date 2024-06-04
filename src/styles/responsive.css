@@ -27,24 +27,6 @@
     text-align: center;
     margin: 0;
   }
- 
-  .movies {
-    grid-template-columns: 1fr 1fr;
-  }
- 
-  .movie {
-    grid-template-columns: auto 1fr;
-  }
- 
-  .movie .movie__title {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
- 
-  .movie .movie__overview {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
 }
  
 @media screen and (min-width: 800px) {
@@ -52,21 +34,44 @@
     font-size: 2em;
   }
 }
- 
-@media screen and (min-width: 850px) {
-  .movies {
-    grid-template-columns: repeat(3, 1fr);
+
+/*Beranda*/
+@media screen and (max-width: 975px) {
+  .about{
+    display: flex;
+    flex-direction: column;
   }
-}
- 
-@media screen and (min-width: 1200px) {
-  .movies {
-    grid-template-columns: repeat(4, 1fr);
+  
+  .aboutImg{
+    display: flex;
+    justify-content: center;
   }
-}
- 
-@media screen and (min-width: 1600px) {
-  .movies {
-      grid-template-columns: repeat(5, 1fr);
+  
+  .cards-project{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
-}
+  }
+  
+  @media screen and (max-width: 750px){
+    article{
+      display: flex;
+      flex-direction: column;
+      padding: 0 30px;
+      justify-content: center;
+      gap: 5rem;
+    }
+    .cards-project{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .join .button{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .artikels{
+      justify-content: center;
+    }
+  }
