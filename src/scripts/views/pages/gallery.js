@@ -7,16 +7,18 @@ const Gallery = {
       <h2><strong>Galeri</strong></h2>
       <div class="cards-project">
         <div class="card">
-          <img
-            src="images/image_5.png"
-            alt=""
-          />
-          <div class="card-body">
-            <h3>Judul Kegiatan</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit
-            </p>
-          </div>
+        <a href = "#/detail-gallery">
+        <img
+        src="images/image_5.png"
+        alt=""
+        />
+        <div class="card-body">
+        <h3>Judul Kegiatan</h3>
+        <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit
+        </p>
+        </div>
+        </a>
         </div>
         <div class="card">
           <img
