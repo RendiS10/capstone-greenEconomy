@@ -21,7 +21,7 @@ const Beranda = {
             deserunt quod sapiente dolor officiis sequi. Veritatis minima
             voluptates optio.
           </p>
-          <button>Read More</button>
+          <button><a href = "#/detail" > Read More </a></button>
         </div>
       </section>
       <section class="aboutWe">  

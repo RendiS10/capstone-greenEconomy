@@ -353,3 +353,26 @@ footer{
   color: #fff;
   height: 6rem;
 }
+
+
+/* Halaman Detail */
+
+/* Detail About */
+.detailAbout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.detailAboutImg{
+  display: flex;
+  justify-content: center
+}
+.detailAboutImg img{
+  width: 610px;
+  height: 331px;
+}
+
+.detailAboutDescription{
+  text-align: justify;
+}
