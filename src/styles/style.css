@@ -239,7 +239,7 @@ article{
 }
 
 .cards-project img {
-  width: 20rem;
+  width: 10rem;
 }
 
 .cards-project .card {
@@ -249,6 +249,8 @@ article{
 .card {
   display: flex;
   flex-direction: column;
+  width: 10rem;
+  height: auto;
 }
 .card-body {
   display: flex;
@@ -329,6 +331,8 @@ article{
 .artikel {
   display: flex;
   flex-direction: column;
+  width: 10rem;
+  height: auto;
 }
 .artikel-body {
   display: flex;
