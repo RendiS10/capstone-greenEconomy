@@ -21,10 +21,10 @@ const Beranda = {
             deserunt quod sapiente dolor officiis sequi. Veritatis minima
             voluptates optio.
           </p>
-          <button><a href = "#/detail" > Read More </a></button>
+          <button><a href = "#/detail" >Baca Selengkapnya</a></button>
         </div>
       </section>
-      <section class="aboutWe">  
+      <section class="aboutWe" id="aboutwe">  
           <h2><strong>Tentang Kami</strong></h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil,
