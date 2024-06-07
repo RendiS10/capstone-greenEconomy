@@ -7,7 +7,7 @@ import Kontak from '../views/pages/kontak';
 import Register from '../views/pages/register';
 import Donasi from '../views/pages/donasi';
 import Gallery from '../views/pages/gallery';
-import DetailGallery from '../views/pages/detailGallery';
+import DetailGallery from '../views/pages/detail-gallery';
 
 const routes = {
   '/': Beranda,
@@ -20,7 +20,7 @@ const routes = {
   '/register': Register,
   '/donasi': Donasi,
   '/gallery': Gallery,
-  '/detailGallery': DetailGallery,
+  '/detail-gallery': DetailGallery,
 };
 
 export default routes;
