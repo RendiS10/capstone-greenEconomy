@@ -3,6 +3,7 @@ const Gallery = {
     return `
     <article>
     <section class="galeri">
+      <p> <a href = "#/beranda"> Beranda</a> >> <a href = "#/gallery"> Galeri</a></p>
       <h2><strong>Galeri</strong></h2>
       <div class="cards-project">
         <div class="card">
