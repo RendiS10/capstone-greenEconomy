@@ -205,14 +205,29 @@ article{
   width: 150px;
   height: 30px;
   box-sizing: border-box;
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+  border: none;
 }
 
-.aboutDescription button a{
+.aboutDescription a button {
   text-decoration: none;
   color: white;
   font-size: 12px;
 }
 
+.aboutDescription button:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+.aboutDescription button:active {
+  background: #148E19;
+  transform: translateY(1px);
+}
+.aboutDescription a button:hover {
+  color: #148E19;
+}
 .aboutWe{
   display: flex;
   flex-direction: column;
@@ -248,11 +263,14 @@ article{
 }
 
 .cards-project img {
-  width: 10rem;
+  width: 200px;
+  height: 150px;
 }
 
 .cards-project .card {
   border: 1px #000 solid;
+  width: 200px;
+  height: auto;
 }
 
 .card {
@@ -271,6 +289,10 @@ article{
 .card-body p {
   display: flex;
   flex-wrap: wrap;
+  max-height: 100px;
+  overflow: auto;
+  white-space: normal;
+  text-align: justify;
 }
 .card h3 {
   display: flex;
@@ -333,11 +355,13 @@ article{
 }
 
 .artikels img {
-  width: 222px;
+  width: 200px;
+  height: 150px;
 }
 
 .listartikel{
   border: 1px #000 solid;
+  width: 200px;
 }
 
 .artikel {
@@ -352,6 +376,14 @@ article{
   font-size: 12px;
   padding: 1rem 1rem;
   gap: 1rem;
+}
+.artikel-body p {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 100px;
+  overflow: auto;
+  white-space: normal;
+  text-align: justify;
 }
 
 .artikel h3 {
