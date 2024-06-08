@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
  
 body {
@@ -229,9 +230,11 @@ article{
   color: #148E19;
 }
 .aboutWe{
+  margin-top: -100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 100px;
   gap: 1rem;
 }
 
@@ -246,6 +249,7 @@ article{
 }
 /*galeri*/
 .galeri{
+  margin-top: -100px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem ;
@@ -303,9 +307,10 @@ article{
 
 .join{
   display: flex;
-  justify-content: center;
-  gap: 2rem;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .join h2{
@@ -318,10 +323,10 @@ article{
   border-radius: 12px;
   background: #19B81F;
   position: relative;
-  margin-right: 38px;
-  padding: 21px 21.1px 22px 21.1px;
-  width: 222px;
+  width: 200px;
   box-sizing: border-box;
+  height: 50px;
+  cursor: pointer;
 }
 .join button a{
   color: white;
