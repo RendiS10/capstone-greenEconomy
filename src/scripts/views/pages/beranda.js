@@ -21,10 +21,10 @@ const Beranda = {
             deserunt quod sapiente dolor officiis sequi. Veritatis minima
             voluptates optio.
           </p>
-          <button><a href = "#/detail" > Read More </a></button>
+        <a href = "#/detail" >  <button>Baca Selengkapnya</button></a>
         </div>
       </section>
-      <section class="aboutWe">  
+      <section class="aboutWe" id="aboutwe">  
           <h2><strong>Tentang Kami</strong></h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil,
@@ -113,7 +113,7 @@ const Beranda = {
           <div class="artikel-body">
             <h3>Judul Kegiatan</h3>
             <p>
-              Lorem ipsum dolo
+              lorem ipsum dolor, sit amet consectetur adipisicing elit lorem ipsum dolor, sit amet consectetur adipisicing elit
             </p>
           </div>
           </div>

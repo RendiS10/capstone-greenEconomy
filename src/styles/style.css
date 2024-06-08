@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
  
 body {
@@ -47,7 +48,7 @@ body {
 }
  
 .app-bar .app-bar__brand h1 {
-  color: #9BCF53;
+  color: #19B81F;
   text-transform: uppercase;
   font-size: 22px;
   user-select: none;
@@ -71,7 +72,7 @@ body {
   text-decoration: none;
   background-color: #ffffff;
   z-index: 1;
-  color: #9BCF53;
+  color: #19B81F;
   border-radius: 3px;
   position: relative;
   display: inline-block;
@@ -80,7 +81,7 @@ body {
   padding: 10px 10px 10px 10px;
 }
 .app-bar .app-bar__navigation ul li a::after{
-  background-color: #9BCF53;
+  background-color: #19B81F;
   content: "";
   width: 100%;
   height: 0;
@@ -184,12 +185,14 @@ article{
 .aboutImg img{
   width: 300px;
   height: 200px;
+  border-radius: 16px;
 }
 
 .aboutDescription {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem ;
+  font-size: 12px;
 }
 
 .aboutDescription p{
@@ -203,12 +206,35 @@ article{
   width: 150px;
   height: 30px;
   box-sizing: border-box;
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+  border: none;
 }
 
+.aboutDescription a button {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+
+.aboutDescription button:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+.aboutDescription button:active {
+  background: #148E19;
+  transform: translateY(1px);
+}
+.aboutDescription a button:hover {
+  color: #148E19;
+}
 .aboutWe{
+  margin-top: -100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 100px;
   gap: 1rem;
 }
 
@@ -219,16 +245,18 @@ article{
 
 .aboutWe p{
   text-align: justify;
+  font-size: 12px;
 }
 /*galeri*/
 .galeri{
+  margin-top: -100px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem ;
 }
 .galeri h2{
   display: flex;
-  justify-content: start;
+  justify-content: center;
 }
 .cards-project {
   gap: 1rem;
@@ -239,11 +267,14 @@ article{
 }
 
 .cards-project img {
-  width: 10rem;
+  width: 200px;
+  height: 150px;
 }
 
 .cards-project .card {
   border: 1px #000 solid;
+  width: 200px;
+  height: auto;
 }
 
 .card {
@@ -259,7 +290,14 @@ article{
   padding: 1rem 1rem;
   gap: 1rem;
 }
-
+.card-body p {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 100px;
+  overflow: auto;
+  white-space: normal;
+  text-align: justify;
+}
 .card h3 {
   display: flex;
   justify-content: center;
@@ -269,9 +307,10 @@ article{
 
 .join{
   display: flex;
-  justify-content: center;
-  gap: 2rem;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .join h2{
@@ -284,10 +323,10 @@ article{
   border-radius: 12px;
   background: #19B81F;
   position: relative;
-  margin-right: 38px;
-  padding: 21px 21.1px 22px 21.1px;
-  width: 222px;
+  width: 200px;
   box-sizing: border-box;
+  height: 50px;
+  cursor: pointer;
 }
 .join button a{
   color: white;
@@ -321,11 +360,13 @@ article{
 }
 
 .artikels img {
-  width: 222px;
+  width: 200px;
+  height: 150px;
 }
 
 .listartikel{
   border: 1px #000 solid;
+  width: 200px;
 }
 
 .artikel {
@@ -340,6 +381,14 @@ article{
   font-size: 12px;
   padding: 1rem 1rem;
   gap: 1rem;
+}
+.artikel-body p {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 100px;
+  overflow: auto;
+  white-space: normal;
+  text-align: justify;
 }
 
 .artikel h3 {
