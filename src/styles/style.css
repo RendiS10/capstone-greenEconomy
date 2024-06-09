@@ -297,6 +297,7 @@ article{
   overflow: auto;
   white-space: normal;
   text-align: justify;
+  font-size: 12px;
 }
 .card h3 {
   display: flex;
@@ -347,6 +348,7 @@ article{
 .artikel{
   display: flex;
   flex-direction: column;
+  height: auto;
   gap: 1rem;
 }
 
@@ -355,8 +357,7 @@ article{
   gap: 1rem;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-
+  justify-content: center;
 }
 
 .artikels img {
@@ -367,13 +368,6 @@ article{
 .listartikel{
   border: 1px #000 solid;
   width: 200px;
-}
-
-.artikel {
-  display: flex;
-  flex-direction: column;
-  width: 10rem;
-  height: auto;
 }
 .artikel-body {
   display: flex;
@@ -400,12 +394,69 @@ article{
 /*Footer*/
 footer{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #19B81F;
-  color: #fff;
-  height: 6rem;
+  flex-direction: column;
 }
+footer .atas{
+  background-color: #3E593D;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: auto;
+  padding: 20px;
+}
+footer .footerImg{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+footer .footerImg img{
+  width: 50%  ;
+}
+
+footer .nama{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 12px;
+  margin-bottom: 10px;
+  
+}
+footer .contact {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+footer .followUs{
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+footer .bawah{
+  background-color: #062701;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-block: .5rem;
+  width: 100%;
+}
+.icon{
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+}
+.followUs .icon i {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+
 
 
 /* Halaman Detail */

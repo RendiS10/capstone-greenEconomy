@@ -117,6 +117,30 @@ const Beranda = {
             </p>
           </div>
           </div>
+          <div class="listartikel">
+          <img
+          src="images/image_5.png"
+          alt=""
+        />
+        <div class="artikel-body">
+          <h3>Judul Kegiatan</h3>
+          <p>
+            lorem ipsum dolor, sit amet consectetur adipisicing elit lorem ipsum dolor, sit amet consectetur adipisicing elit
+          </p>
+        </div>
+        </div>
+        <div class="listartikel">
+        <img
+        src="images/image_5.png"
+        alt=""
+      />
+      <div class="artikel-body">
+        <h3>Judul Kegiatan</h3>
+        <p>
+          lorem ipsum dolor, sit amet consectetur adipisicing elit lorem ipsum dolor, sit amet consectetur adipisicing elit
+        </p>
+      </div>
+      </div>
         </div>
       </section>
     </article>
