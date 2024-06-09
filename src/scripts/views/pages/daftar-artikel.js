@@ -6,7 +6,7 @@ const DaftarArtikel = {
     <div class="lokasi">
       <p> <a href = "#/beranda"> Beranda</a> >> <a href = "#/daftar-artikel"> Daftar Artikel</a></p>
     </div>
-    <section>
+    <section class="daftarArtikel">
       <h2>Daftar List Artikel</h2>
         <div class="artikelList">
           <img src="images/image_5.png" alt="">

@@ -482,6 +482,12 @@ footer .bawah{
 
 
 /* Halaman Detail Galeri */
+.daftar-galeri{
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .detailGallery{
   display: flex;
   flex-direction: column;
@@ -514,7 +520,8 @@ footer .bawah{
   text-decoration: none;
   color: black;
 }
-section{
+.daftarArtikel{
+  margin-top: -80px;
   margin-left: 50px;
   display: flex;
   flex-direction: column;
