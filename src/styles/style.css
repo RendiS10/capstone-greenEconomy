@@ -297,6 +297,7 @@ article{
   overflow: auto;
   white-space: normal;
   text-align: justify;
+  font-size: 12px;
 }
 .card h3 {
   display: flex;
@@ -392,9 +393,44 @@ article{
 
 /*Footer*/
 footer{
-  background-color: #19B81F;
+  background-color: #3E593D;
   color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: auto;
 }
+footer .footerImg{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+footer .nama{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 12px;
+  margin-bottom: 10px;
+  
+}
+footer .contact {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+footer .followUs{
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
 
 
 /* Halaman Detail */
