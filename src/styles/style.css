@@ -393,16 +393,24 @@ article{
 
 /*Footer*/
 footer{
+  display: flex;
+  flex-direction: column;
+}
+footer .atas{
   background-color: #3E593D;
   color: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   height: auto;
+  padding: 20px;
 }
 footer .footerImg{
     display: flex;
     align-items: center;
     margin-left: 30px;
+}
+footer .footerImg img{
+  width: 50%  ;
 }
 
 footer .nama{
@@ -430,6 +438,24 @@ footer .followUs{
   margin-bottom: 10px;
   margin-top: 10px;
 }
+footer .bawah{
+  background-color: #062701;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-block: .5rem;
+  width: 100%;
+}
+.icon{
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+}
+.followUs .icon i {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
 
 
 
