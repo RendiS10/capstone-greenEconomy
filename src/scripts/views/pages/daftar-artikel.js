@@ -18,7 +18,6 @@ const DaftarArtikel = {
           </div>
         </div>
         <hr>
-        <h2>Daftar List Artikel</h2>
         <div class="artikelList">
           <img src="images/image_5.png" alt="">
           <div class="textArtikel">
@@ -29,7 +28,6 @@ const DaftarArtikel = {
           </div>
         </div>
         <hr>
-        <h2>Daftar List Artikel</h2>
         <div class="artikelList">
           <img src="images/image_5.png" alt="">
           <div class="textArtikel">

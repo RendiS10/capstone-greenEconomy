@@ -8,18 +8,16 @@ const Beranda = {
         </div>
         <div class="aboutDescription">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maxime
-            quaerat nisi cumque! Iure odio debitis similique eius, nihil
-            libero non animi doloremque atque ullam tempore suscipit
-            temporibus, quas necessitatibus! Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Fugiat velit distinctio nihil quos
-            nobis suscipit dignissimos nesciunt soluta reprehenderit
-            consectetur officia, nulla rerum impedit a laudantium accusamus.
-            Delectus, iusto itaque. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Veritatis architecto vitae repudiandae sit,
-            reiciendis suscipit placeat tempora consectetur sed dolorem
-            deserunt quod sapiente dolor officiis sequi. Veritatis minima
-            voluptates optio.
+          Ekonomi hijau adalah konsep ekonomi yang mengedepankan rendah karbon, 
+          efisiensi sumber daya, dan inklusivitas sosial. Dalam kerangka ekonomi hijau, 
+          peningkatan lapangan kerja dan pendapatan dipacu oleh investasi dari sektor pemerintah dan swasta dalam aktivitas ekonomi, infrastruktur, 
+          dan aset yang mendukung pengurangan emisi karbon dan polusi, peningkatan efisiensi energi dan sumber daya,
+          serta pencegahan kehilangan keanekaragaman hayati dan layanan ekosistem.   
+          </p>
+          <p>
+          Investasi ramah lingkungan ini perlu diaktifkan dan diperkuat melalui pengeluaran publik yang terarah,
+          reformasi kebijakan, serta perubahan dalam perpajakan dan regulasi. 
+          Program Lingkungan Hidup PBB mendukung jalur pembangunan yang menganggap<a href = "#" style = "text-decoration : none;">......................</a>
           </p>
         <a href = "#/detail" >  <button>Baca Selengkapnya</button></a>
         </div>
@@ -27,17 +25,7 @@ const Beranda = {
       <section class="aboutWe" id="aboutwe">  
           <h2><strong>Tentang Kami</strong></h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil,
-            quaerat rerum. Esse, sed. Iste ex magnam ipsam nihil! Laudantium
-            nemo id reiciendis sit distinctio illum nisi, quasi in voluptas
-            impedit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Obcaecati labore natus amet minima odit! Quibusdam assumenda
-            delectus placeat, culpa mollitia beatae, officia hic, qui
-            excepturi illo quas sit quod voluptate? Lorem ipsum dolor, sit
-            amet consectetur adipisicing elit. Culpa fugiat aspernatur iste,
-            aliquid nihil pariatur voluptates, doloremque molestiae commodi
-            accusamus obcaecati architecto, maxime rerum et molestias
-            excepturi amet tempora nam?
+           Selamat datang di website green economy kami, kami berkomitmen agar website ini menjadi tolak ukur agar orang lebih peduli dengan lingkungan dengan cara menjadi volunteer dengan tim kami.
           </p>
     
       </section>

@@ -458,8 +458,6 @@ footer .bawah{
 }
 
 
-
-
 /* Halaman Detail */
 
 /* Detail About */
@@ -483,7 +481,7 @@ footer .bawah{
 }
 
 
-/* Detail Galeri */
+/* Halaman Detail Galeri */
 .detailGallery{
   display: flex;
   flex-direction: column;
@@ -504,7 +502,7 @@ footer .bawah{
   justify-items: center;
 }
 
-/*Daftar Artikel*/
+/*Halaman Daftar Artikel*/
 .lokasi{
   border: solid 1px black;
   border-radius: 3px;
@@ -546,4 +544,10 @@ section{
 .textArtikel a{
   text-decoration: none;
   color: green;
+}
+
+/*Halaman Daftar Gallery*/
+
+.daftar-gallery{
+  
 }
