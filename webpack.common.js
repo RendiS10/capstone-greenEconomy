@@ -24,6 +24,16 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(js|jsx)$/, // Added support for .jsx files
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'] // Added preset for React
+          }
+        }
+      }
     ],
   },
   plugins: [

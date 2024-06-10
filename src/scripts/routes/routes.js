@@ -6,7 +6,7 @@ import DaftarArtikel from '../views/pages/daftar-artikel';
 import Kontak from '../views/pages/kontak';
 import Register from '../views/pages/register';
 import Donasi from '../views/pages/donasi';
-import Gallery from '../views/pages/gallery';
+import Gallery from '../views/pages/daftar-gallery';
 import DetailGallery from '../views/pages/detail-gallery';
 
 const routes = {
@@ -19,8 +19,8 @@ const routes = {
   '/kontak': Kontak,
   '/register': Register,
   '/donasi': Donasi,
-  '/gallery': Gallery,
-  '/detail-gallery': DetailGallery,
+  '/daftar-gallery': Gallery,
+  '/detail-gallery/:id': DetailGallery,
 };
 
 export default routes;
