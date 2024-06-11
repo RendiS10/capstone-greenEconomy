@@ -171,10 +171,9 @@ main{
 article{
     display: flex;
     flex-direction: column;
-    padding: 0 180px;
     justify-content: center;
+    padding: 0 180px;
     gap: 5rem;
-    
 }
 .about {
   display: flex;
@@ -231,10 +230,10 @@ article{
   color: #148E19;
 }
 .aboutWe{
-  margin-top: -100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 100px;
   gap: 1rem;
 }
@@ -245,12 +244,11 @@ article{
 }
 
 .aboutWe p{
-  text-align: justify;
+  text-align: center;
   font-size: 12px;
 }
 /*galeri*/
 .galeri{
-  margin-top: -100px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem ;
@@ -276,10 +274,76 @@ article{
 }
 
 .cards-project .card {
-  border: 1px #000 solid;
+  border: 1px solid #ddd; /* Mengubah warna border menjadi lebih lembut */
   width: 200px;
-  height: auto;
+  height: 280px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0rem 0.3rem 0.3rem 0rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.8rem;
+  background-color: #ffffff; /* Warna latar belakang putih */
+  overflow: hidden; /* Menghindari konten melampaui border radius */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.cards-project .card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.08) rotate(1deg); /* Menambahkan sedikit rotasi */
+}
+
+.cards-project .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+}
+
+.cards-project .card:hover::before {
+  opacity: 1;
+}
+
+/* Tambahkan padding untuk konten di dalam kartu */
+.cards-project .card .content {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Contoh styling untuk teks di dalam kartu */
+.cards-project .card h3 {
+  font-size: 12px;
+  margin: 0 0 10px;
+  color: #148E19; /* Mengubah warna teks */
+}
+
+.cards-project .card p {
+  font-size: 14px;
+  color: #555; /* Warna teks yang sedikit lebih gelap */
+}
+
+/* Menambahkan gaya untuk tombol di dalam kartu */
+.cards-project .card .button {
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #148E19; /* Warna tombol */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cards-project .card .button:hover {
+  background-color: #0f6d14; /* Warna tombol ketika dihover */
+}
+
 
 .card {
   display: flex;
@@ -313,7 +377,7 @@ article{
 
 /*jOIN*/
 
-.join{
+.join {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -321,7 +385,7 @@ article{
   gap: 1.5rem;
 }
 
-.join h2{
+.join h2 {
   display: flex;
   justify-content: center;
 }
@@ -335,20 +399,44 @@ article{
   box-sizing: border-box;
   height: 50px;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi untuk animasi */
 }
-.join button a{
+
+.join button:hover {
+  transform: scale(1.05); /* Memperbesar tombol sedikit */
+  box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.35); /* Menambah bayangan saat dihover */
+}
+
+.join button a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 22px;
 }
 
-.button{
+.button {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
+
+hr{
+  background: #D9D9D9;
+  margin: 0 0 1.5rem 0.3rem;
+  width: 44.8rem;
+  height: 0.3rem;
+}
+.bg-join {
+  box-shadow: 0rem 0.3rem 0.3rem 0rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px black;
+  background-color: whitesmoke;
+  height: 200px;
+}
 
 /* Artikel*/
 .article{
@@ -377,10 +465,54 @@ article{
 }
 
 .article-list .card-article {
-  border: 1px #000 solid;
+  border: 1px solid #ccc; /* Mengubah warna border menjadi lebih lembut */
   width: 200px;
-  height: auto;
+  height: 280px;
+  box-shadow: 0rem 0.3rem 0.3rem 0rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.8rem;
+  background-color: #f9f9f9; /* Menambahkan warna latar belakang */
+  overflow: hidden; /* Menghindari konten melampaui border radius */
+  position: relative;
 }
+
+.article-list .card-article:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  transform: scale(1.05);
+}
+
+.article-list .card-article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.article-list .card-article:hover::before {
+  opacity: 1;
+}
+
+/* Tambahkan padding untuk konten di dalam kartu */
+.article-list .card-article .content {
+  padding: 20px;
+}
+
+/* Contoh styling untuk teks di dalam kartu */
+.article-list .card-article h2 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.article-list .card-article p {
+  font-size: 14px;
+  color: #555;
+}
+
 
 .card-article {
   display: flex;
@@ -497,6 +629,10 @@ footer .bawah{
   justify-content: center;
   gap: 2rem;
 }
+.detailImg p{
+  text-indent: 25px;
+  text-align: justify;
+}
 
 .detail img{
   width: 600px;
@@ -563,3 +699,4 @@ footer .bawah{
   flex-direction: column;
   gap: 2rem;
 }
+
