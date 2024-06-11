@@ -6,7 +6,9 @@ const Gallery = {
     return `
     <article>
     <section class="daftar-galeri">
-      <p> <a href = "#/beranda"> Beranda</a> >> <a href = "#/gallery"> Galeri</a></p>
+     <div class="lokasi">
+      <p> <a href = "#/beranda"> Beranda</a> >> <a href = "#/daftar-gallery"> Daftar Galeri</a></p>
+    </div>
       <h2><strong>Galeri</strong></h2>
       <div class="cards-project" id="gallery-list">
        

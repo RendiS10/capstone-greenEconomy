@@ -26,19 +26,20 @@ const DaftarArtikel = {
     const articles = articleResponse.data;
     const articleListElement = document.getElementById('article-list');
     articles.forEach((article) => {
+      const truncatedDescription = `${article.description.substring(0, 250)}...`;
       const articleElement = `
-      <div class="article-body">
-             <img src="${article.url}" alt="${article.name}" />
-             <div class="textArtikel">
-               <h3>${article.name}</h3>
-               <p>${article.description}<a href="#/detailArticle/${article.id}"> 
-               <br>
-               <br>
-               Baca Selengkapnya >> </a></p>
-             </div>
-              </div>
-                   <hr>
-       `;
+    <div class="article-body">
+      <img src="${article.url}" alt="${article.name}" />
+      <div class="textArtikel">
+        <h3>${article.name}</h3>
+        <p>${truncatedDescription}<a href="#/detail-artikel/${article.id}"> 
+        <br>
+        <br>
+        Baca Selengkapnya >> </a></p>
+      </div>
+      </div>
+      <hr>
+  `;
       articleListElement.innerHTML += articleElement;
     });
   },

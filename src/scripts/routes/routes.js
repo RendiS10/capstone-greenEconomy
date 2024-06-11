@@ -1,6 +1,6 @@
 import Beranda from '../views/pages/beranda';
 import Detail from '../views/pages/detail';
-import DetailArtikel from '../views/pages/detailArtikel';
+import DetailArtikel from '../views/pages/detail-artikel';
 import Login from '../views/pages/login';
 import DaftarArtikel from '../views/pages/daftar-artikel';
 import Kontak from '../views/pages/kontak';
@@ -13,7 +13,7 @@ const routes = {
   '/': Beranda,
   '/beranda': Beranda,
   '/detail': Detail,
-  '/detailArtikel': DetailArtikel,
+  '/detail-artikel/:id': DetailArtikel,
   '/login': Login,
   '/daftar-artikel': DaftarArtikel,
   '/kontak': Kontak,

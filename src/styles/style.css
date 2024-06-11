@@ -266,6 +266,9 @@ article{
   justify-content: center;
   flex-wrap: wrap;
 }
+.cards-project a{
+  text-decoration: none;
+}
 
 .cards-project img {
   width: 200px;
@@ -304,6 +307,8 @@ article{
 .card h3 {
   display: flex;
   font-size: 12px;
+  color: black;
+  justify-content: center;
 }
 
 /*jOIN*/
@@ -362,6 +367,9 @@ article{
   justify-content: start;
   flex-wrap: wrap;
 }
+.article-list a{
+  text-decoration: none;
+}
 
 .article-list img {
   width: 200px;
@@ -400,6 +408,8 @@ article{
 .card-article h3 {
   display: flex;
   font-size: 12px;
+  color: black;
+  justify-content: center
 }
 
 
@@ -469,49 +479,31 @@ footer .bawah{
   font-size: 30px;
 }
 
-
 /* Halaman Detail */
 
-/* Detail About */
-.detailAbout{
+.detail{
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+}
+.detail h2{
+  display: flex;
   justify-content: center;
-  gap: 1.5rem;
 }
-.detailAboutImg{
-  display: flex;
-  justify-content: center
-}
-.detailAboutImg img{
-  width: 610px;
-  height: 331px;
-}
-
-.detailAboutDescription{
-  text-align: justify;
-}
-
-
-/* Halaman Detail Galeri */
-.detailGallery{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.detailGalleryImg{
+.detailImg{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
-.detailGallery img{
+.detail img{
   width: 600px;
   height: 360px;
   display: flex;
   justify-items: center;
+  border-radius: 10px;
 }
 
 /*Halaman Daftar Artikel*/

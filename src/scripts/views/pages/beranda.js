@@ -3,6 +3,7 @@ import axios from 'axios';
 const Beranda = {
   async render() {
     return `
+      <my-hero></my-hero>
     <article>
       <section class="about">
         <div class="aboutImg">
@@ -67,7 +68,7 @@ const Beranda = {
           <div class="card">
             <img src="${gallery.url}" alt="${gallery.name}" />
             <div class="card-body">
-            <h3>Judul : ${gallery.name}</h3>
+            <h3>${gallery.name}</h3>
             </div>
           </div>
           </a>
@@ -80,7 +81,7 @@ const Beranda = {
     const articleListElement = document.getElementById('article-list');
     articles.forEach((article) => {
       const articleElement = `
-        <a href="#/detail-gallery/${article.id}">
+        <a href="#/detail-artikel/${article.id}">
           <div class="card-article">
             <img src="${article.url}" alt="${article.name}" />
             <div class="card-article-body">

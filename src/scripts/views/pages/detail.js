@@ -2,8 +2,8 @@ const Detail = {
   async render() {
     return `
     <article>
-    <section class="detailAbout">
-      <div class="detailAboutImg">
+    <section class="detail">
+      <div class="detailImg">
         <img src="images/image_2.png" alt="" />
       </div>
       <div class="detailAboutDescription">
@@ -22,24 +22,6 @@ const Detail = {
         <p>
         Dengan mengadopsi ekonomi hijau, negara-negara di Asia dan Pasifik diharapkan dapat mencapai pembangunan yang lebih inklusif dan berkelanjutan, di mana pertumbuhan ekonomi sejalan dengan pelestarian lingkungan dan peningkatan kesejahteraan sosial.
         </p>
-      </div>
-    </section>
-    <section class="artikel">
-      <h2><strong>Artikel</strong></h2>
-      <hr>
-      <div class="artikels">
-        <div class="listartikel">
-          <img
-          src="images/image_5.png"
-          alt=""
-        />
-        <div class="artikel-body">
-          <h3>Judul Kegiatan</h3>
-          <p>
-            Lorem ipsum dolo
-          </p>
-        </div>
-        </div>
       </div>
     </section>
   </article>
