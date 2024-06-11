@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const DaftarArtikel = {
 
   async render() {
@@ -8,36 +10,11 @@ const DaftarArtikel = {
     </div>
     <section class="daftarArtikel">
       <h2>Daftar List Artikel</h2>
-        <div class="artikelList">
-          <img src="images/image_5.png" alt="">
-          <div class="textArtikel">
-            <h3>Judul Kegiatan</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. vero necessitatibus omnis iste iure inventore minus dolorum alias expedita, odit voluptates dolore dolor aut dolores optio at explicabo modi cum facere, eaque non suscipit, nesciunt fugiat. Totam, numquam.
-            Voluptate expedita ipsum repudiandae, cum, voluptas ratione inventore sapiente distinctio eum ut in ab ducimus. Fuga illo ex eaque, soluta ipsam magnam voluptate illum ad molestias officiis quam repellat accusamus?</p>
-            <a href="">Baca Selengkapnya >> </a>
-          </div>
-        </div>
-        <hr>
-        <div class="artikelList">
-          <img src="images/image_5.png" alt="">
-          <div class="textArtikel">
-            <h3>Judul Kegiatan</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. vero necessitatibus omnis iste iure inventore minus dolorum alias expedita, odit voluptates dolore dolor aut dolores optio at explicabo modi cum facere, eaque non suscipit, nesciunt fugiat. Totam, numquam.
-            Voluptate expedita ipsum repudiandae, cum, voluptas ratione inventore sapiente distinctio eum ut in ab ducimus. Fuga illo ex eaque, soluta ipsam magnam voluptate illum ad molestias officiis quam repellat accusamus?</p>
-            <a href="">Baca Selengkapnya >> </a>
-          </div>
-        </div>
-        <hr>
-        <div class="artikelList">
-          <img src="images/image_5.png" alt="">
-          <div class="textArtikel">
-            <h3>Judul Kegiatan</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. vero necessitatibus omnis iste iure inventore minus dolorum alias expedita, odit voluptates dolore dolor aut dolores optio at explicabo modi cum facere, eaque non suscipit, nesciunt fugiat. Totam, numquam.
-            Voluptate expedita ipsum repudiandae, cum, voluptas ratione inventore sapiente distinctio eum ut in ab ducimus. Fuga illo ex eaque, soluta ipsam magnam voluptate illum ad molestias officiis quam repellat accusamus?</p>
-            <a href="">Baca Selengkapnya >> </a>
-          </div>
-        </div>
-        <hr>
+      
+        <div class="artikelList" id="article-list">
+      
+      </div>
+   
     </section>
   </article>
     `;
@@ -45,6 +22,25 @@ const DaftarArtikel = {
 
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
+    const articleResponse = await axios.get('http://localhost:5000/articles');
+    const articles = articleResponse.data;
+    const articleListElement = document.getElementById('article-list');
+    articles.forEach((article) => {
+      const articleElement = `
+      <div class="article-body">
+             <img src="${article.url}" alt="${article.name}" />
+             <div class="textArtikel">
+               <h3>${article.name}</h3>
+               <p>${article.description}<a href="#/detailArticle/${article.id}"> 
+               <br>
+               <br>
+               Baca Selengkapnya >> </a></p>
+             </div>
+              </div>
+                   <hr>
+       `;
+      articleListElement.innerHTML += articleElement;
+    });
   },
 };
 
