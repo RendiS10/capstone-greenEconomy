@@ -1,4 +1,7 @@
 import 'regenerator-runtime';
+import '../components/my-navbar';
+import '../components/my-hero';
+import '../components/my-footer';
 import '../styles/style.css';
 import '../styles/responsive.css';
 import App from './views/app';

@@ -1,61 +1,17 @@
+/* eslint-disable no-undef */
+import axios from 'axios';
+
 const Gallery = {
   async render() {
     return `
     <article>
     <section class="daftar-galeri">
-      <p> <a href = "#/beranda"> Beranda</a> >> <a href = "#/gallery"> Galeri</a></p>
+     <div class="lokasi">
+      <p> <a href = "#/beranda"> Beranda</a> >> <a href = "#/daftar-gallery"> Daftar Galeri</a></p>
+    </div>
       <h2><strong>Galeri</strong></h2>
-      <div class="cards-project">
-        <div class="card">
-        <a href = "#/detail-gallery">
-        <img
-        src="images/image_5.png"
-        alt=""
-        />
-        <div class="card-body">
-        <h3>Judul Kegiatan</h3>
-        <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit
-        </p>
-        </div>
-        </a>
-        </div>
-        <div class="card">
-          <img
-            src="images/image_5.png"
-            alt=""
-          />
-          <div class="card-body">
-            <h3>Judul Kegiatan</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="images/image_5.png"
-            alt=""
-          />
-          <div class="card-body">
-            <h3>Judul Kegiatan</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="images/image_5.png"
-            alt=""
-          />
-          <div class="card-body">
-            <h3>Judul Kegiatan</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit lor
-            </p>
-          </div>
-        </div>
+      <div class="cards-project" id="gallery-list">
+       
       </div>
   </section>
   </article>
@@ -63,7 +19,23 @@ const Gallery = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    // Mengambil data galeri dari server
+    const response = await axios.get('http://localhost:5000/galleries');
+    const galleries = response.data;
+    const galleryListElement = document.getElementById('gallery-list');
+    galleries.forEach((gallery) => {
+      const galleryElement = `
+        <a href="#/detail-gallery/${gallery.id}">
+          <div class="card">
+            <img src="${gallery.url}" alt="${gallery.name}" />
+            <div class="card-body">
+            <h3>Judul : ${gallery.name}</h3>
+            </div>
+          </div>
+          </a>
+        `;
+      galleryListElement.innerHTML += galleryElement;
+    });
   },
 };
 

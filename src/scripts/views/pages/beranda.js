@@ -1,6 +1,9 @@
+import axios from 'axios';
+
 const Beranda = {
   async render() {
     return `
+      <my-hero></my-hero>
     <article>
       <section class="about">
         <div class="aboutImg">
@@ -31,55 +34,8 @@ const Beranda = {
       </section>
       <section class="galeri">
           <h2><strong>Galeri</strong></h2>
-          <div class="cards-project">
-            <div class="card">
-              <img
-                src="images/image_5.png"
-                alt=""
-              />
-              <div class="card-body">
-                <h3>Judul Kegiatan</h3>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <img
-                src="images/image_5.png"
-                alt=""
-              />
-              <div class="card-body">
-                <h3>Judul Kegiatan</h3>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <img
-                src="images/image_5.png"
-                alt=""
-              />
-              <div class="card-body">
-                <h3>Judul Kegiatan</h3>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <img
-                src="images/image_5.png"
-                alt=""
-              />
-              <div class="card-body">
-                <h3>Judul Kegiatan</h3>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit
-                </p>
-              </div>
-            </div>
+          <div class="cards-project" id="gallery-list">
+            <!-- Galeri akan dimuat di sini -->
           </div>
       </section>
       <section class="join">
@@ -89,54 +45,53 @@ const Beranda = {
             <button><a href="https://kitabisa.com/campaign/pohonkebaikanuntuklingkungan">Donasi</a></button>
           </div>
       </section>
-      <section class="artikel">
-        <h2><strong>Artikel</strong></h2>
-        <hr>
-        <div class="artikels">
-          <div class="listartikel">
-            <img
-            src="images/image_5.png"
-            alt=""
-          />
-          <div class="artikel-body">
-            <h3>Judul Kegiatan</h3>
-            <p>
-              lorem ipsum dolor, sit amet consectetur adipisicing elit lorem ipsum dolor, sit amet consectetur adipisicing elit
-            </p>
+      <section class="article">
+          <h2><strong>Artikel</strong></h2>
+          <hr>
+          <div class="article-list" id="article-list">
+            <!-- Artikel akan dimuat di sini -->
           </div>
-          </div>
-          <div class="listartikel">
-          <img
-          src="images/image_5.png"
-          alt=""
-        />
-        <div class="artikel-body">
-          <h3>Judul Kegiatan</h3>
-          <p>
-            lorem ipsum dolor, sit amet consectetur adipisicing elit lorem ipsum dolor, sit amet consectetur adipisicing elit
-          </p>
-        </div>
-        </div>
-        <div class="listartikel">
-        <img
-        src="images/image_5.png"
-        alt=""
-      />
-      <div class="artikel-body">
-        <h3>Judul Kegiatan</h3>
-        <p>
-          lorem ipsum dolor, sit amet consectetur adipisicing elit lorem ipsum dolor, sit amet consectetur adipisicing elit
-        </p>
-      </div>
-      </div>
-        </div>
+      </section>
       </section>
     </article>
     `;
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    // Mengambil data galeri dari server
+    const response = await axios.get('http://localhost:5000/galleries');
+    const galleries = response.data;
+    const galleryListElement = document.getElementById('gallery-list');
+    galleries.forEach((gallery) => {
+      const galleryElement = `
+        <a href="#/detail-gallery/${gallery.id}">
+          <div class="card">
+            <img src="${gallery.url}" alt="${gallery.name}" />
+            <div class="card-body">
+            <h3>${gallery.name}</h3>
+            </div>
+          </div>
+          </a>
+        `;
+      galleryListElement.innerHTML += galleryElement;
+    });
+    // Mengambil data artikel dari server
+    const articleResponse = await axios.get('http://localhost:5000/articles');
+    const articles = articleResponse.data;
+    const articleListElement = document.getElementById('article-list');
+    articles.forEach((article) => {
+      const articleElement = `
+        <a href="#/detail-artikel/${article.id}">
+          <div class="card-article">
+            <img src="${article.url}" alt="${article.name}" />
+            <div class="card-article-body">
+            <h3>Judul : ${article.name}</h3>
+            </div>
+          </div>
+          </a>
+        `;
+      articleListElement.innerHTML += articleElement;
+    });
   },
 };
 
