@@ -72,10 +72,57 @@
       align-items: center;
     }
   }
-  @media screen and (max-width: 390px){
-    .cards-project{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+  @media screen and (max-width: 490px) {
+    my-navbar{
+      width: 100%;
+    } 
+    main{
+      width: 100%;
     }
-
+    article{
+      width: 100%;
+      padding: 0 20px;
+    }
+    .about{
+      flex-direction: column;
+    }
+    .aboutImg{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    .aboutDescription{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 12px;
+      padding: 0 25px;
+    }
+    .aboutWe {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0px;
+  }
+  .bg-join {
+    box-shadow: 0rem 0.3rem 0.3rem 0rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.8rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border: solid 1px black;
+    background-color: whitesmoke;
+    height: 200px;
+    width: 100%; /* Ensure the width takes up the full available space */
+    max-width: 400px; /* Optional: Set a max width if desired */
+    margin: 0 auto; /* Center the element horizontally */
+  }
+  
+  
+    my-footer{
+      width: 100%;
+    }
+    .article-list{
+      justify-content: center;
+    }
   }

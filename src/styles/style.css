@@ -641,7 +641,10 @@ footer .bawah{
   justify-items: center;
   border-radius: 10px;
 }
-
+.detailAboutDescription p{
+  text-indent: 25px;
+  text-align: justify;
+}
 /*Halaman Daftar Artikel*/
 .lokasi{
   border: solid 1px black;

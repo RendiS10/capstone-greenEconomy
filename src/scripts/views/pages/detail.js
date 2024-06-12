@@ -3,6 +3,9 @@ const Detail = {
     return `
     <article>
     <section class="detail">
+      <div class="lokasi">
+            <p> <a href="#/beranda"> Beranda</a> >> <a href="#/detail"> Detail Artikel </a></p>
+          </div>
       <div class="detailImg">
         <img src="images/image_2.png" alt="" />
       </div>
