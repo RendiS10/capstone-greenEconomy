@@ -1,7 +1,7 @@
-const Register = {
+const Join = {
   async render() {
     return `
-      <h2>Halaman Register</h2>
+      <h2>Halaman Join</h2>
     `;
   },
 
@@ -10,4 +10,4 @@ const Register = {
   },
 };
 
-export default Register;
+export default Join;

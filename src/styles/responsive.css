@@ -36,46 +36,201 @@
 }
 
 /*Beranda*/
-@media screen and (max-width: 975px) {
-  .about{
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .aboutImg{
-    display: flex;
-    justify-content: center;
-  }
-  
-  .cards-project{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  }
-  
-  @media screen and (max-width: 750px){
-    article{
-      display: flex;
-      flex-direction: column;
-      padding: 0 30px;
-      justify-content: center;
-      gap: 5rem;
-    }
-    .cards-project{
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .join .button{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-  @media screen and (max-width: 390px){
-    .cards-project{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
+/* Kode CSS responsif */
 
+/* Perangkat dengan lebar layar maksimum 992px */
+@media (max-width: 992px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
   }
+  .aboutDescription {
+    text-align: center;
+  }
+  .aboutDescription button {
+    width: 100%;
+  }
+}
+
+/* Perangkat dengan lebar layar maksimum 768px */
+@media (max-width: 768px) {
+  article {
+    padding: 0 50px;
+  }
+  .aboutImg img {
+    width: 100%;
+    height: auto;
+  }
+  .aboutDescription {
+    font-size: 12px;
+  }
+  .cards-project .card,
+  .article-list .card-article {
+    width: 150px;
+    height: 230px;
+  }
+  .cards-project img,
+  .article-list img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Perangkat dengan lebar layar maksimum 576px */
+@media (max-width: 576px) {
+  article {
+    padding: 0 20px;
+  }
+  .aboutWe {
+    padding: 50px;
+  }
+  .join button {
+    width: 100%;
+    height: 40px;
+  }
+  .join button a {
+    font-size: 18px;
+  }
+  .article h2,
+  .galeri h2 {
+    font-size: 18px;
+  }
+  .bg-join {
+    height: auto;
+    padding: 20px;
+  }
+  hr {
+    width: 100%;
+  }
+  .cards-project .card,
+  .article-list .card-article {
+    width: 100px;
+    height: 180px;
+  }
+  .cards-project img,
+  .article-list img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Detail */
+/* Kode CSS responsif untuk halaman detail */
+
+
+/* Perangkat dengan lebar layar maksimum 992px */
+@media (max-width: 992px) {
+  .detail {
+    flex-direction: column;
+    align-items: center;
+  }
+  .detailAboutDescription {
+    text-align: center;
+  }
+}
+
+/* Perangkat dengan lebar layar maksimum 768px */
+@media (max-width: 768px) {
+  .detailImg img {
+    width: 100%;
+    height: auto;
+  }
+  .detailAboutDescription {
+    font-size: 12px;
+    padding: 0 20px;
+  }
+}
+
+/* Perangkat dengan lebar layar maksimum 576px */
+@media (max-width: 576px) {
+  .detailAboutDescription {
+    font-size: 10px;
+    padding: 0 10px;
+  }
+  .lokasi p {
+    font-size: 12px;
+  }
+}
+
+/* Daftar Artikel */
+/* Kode CSS responsif untuk halaman daftar artikel */
+
+
+/* Perangkat dengan lebar layar maksimum 992px */
+@media (max-width: 992px) {
+  .article-body {
+    flex-direction: column;
+    align-items: center;
+  }
+  .article-body img {
+    width: 100%;
+    height: auto;
+  }
+  .textArtikel h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .textArtikel p {
+    text-align: center;
+  }
+}
+
+/* Perangkat dengan lebar layar maksimum 768px */
+@media (max-width: 768px) {
+  .artikelList {
+    padding: 0 20px;
+  }
+  .textArtikel h3 {
+    font-size: 18px;
+  }
+  .textArtikel p {
+    font-size: 12px;
+  }
+}
+
+/* Perangkat dengan lebar layar maksimum 576px */
+@media (max-width: 576px) {
+  .artikelList {
+    padding: 0 10px;
+  }
+  .textArtikel h3 {
+    font-size: 16px;
+  }
+  .textArtikel p {
+    font-size: 10px;
+  }
+  .lokasi p {
+    font-size: 12px;
+  }
+}
+.cards-project {
+  display: flex;
+  gap: 2rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .cards-project {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cards-project {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
