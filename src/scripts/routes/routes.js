@@ -4,7 +4,7 @@ import DetailArtikel from '../views/pages/detail-artikel';
 import Login from '../views/pages/login';
 import DaftarArtikel from '../views/pages/daftar-artikel';
 import Kontak from '../views/pages/kontak';
-import Register from '../views/pages/register';
+import Join from '../views/pages/join';
 import Donasi from '../views/pages/donasi';
 import Gallery from '../views/pages/daftar-gallery';
 import DetailGallery from '../views/pages/detail-gallery';
@@ -17,7 +17,7 @@ const routes = {
   '/login': Login,
   '/daftar-artikel': DaftarArtikel,
   '/kontak': Kontak,
-  '/register': Register,
+  '/join': Join,
   '/donasi': Donasi,
   '/daftar-gallery': Gallery,
   '/detail-gallery/:id': DetailGallery,

@@ -189,6 +189,7 @@ article{
 }
 
 .aboutDescription {
+  text-indent: 25px;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem ;
@@ -274,19 +275,14 @@ article{
 }
 
 .cards-project .card {
-  border: 1px solid #ddd; /* Mengubah warna border menjadi lebih lembut */
+  border: 1px solid #ccc;
   width: 200px;
   height: 280px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
   box-shadow: 0rem 0.3rem 0.3rem 0rem rgba(0, 0, 0, 0.25);
   border-radius: 0.8rem;
-  background-color: #ffffff; /* Warna latar belakang putih */
-  overflow: hidden; /* Menghindari konten melampaui border radius */
+  background-color: #f9f9f9;
+  overflow: hidden;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .cards-project .card:hover {
@@ -353,11 +349,8 @@ article{
 }
 .card-body {
   border-top: solid 1px #000;
-  display: flex;
-  flex-direction: column;
   font-size: 12px;
   padding: 1rem 1rem;
-  gap: 1rem;
 }
 .card-body p {
   display: flex;
@@ -701,5 +694,9 @@ footer .bawah{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+.daftar-galeri h2{
+  display: flex;
+  justify-content: center;
 }
 
