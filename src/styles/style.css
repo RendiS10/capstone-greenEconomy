@@ -699,4 +699,32 @@ footer .bawah{
   display: flex;
   justify-content: center;
 }
-
+/*Halaman Join*/
+/*Halaman Join */
+.card-join{
+  border: #000 solid 1px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+}
+.cards-project-join {
+  gap: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  }
+.card-join span{
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  font-weight: bold;
+}
+.cards-project-join img {
+  width: 10rem;
+  }
+  
+  .cards-project-join .card {
+  border: 1px #000 solid;
+  }
