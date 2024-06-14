@@ -43,8 +43,8 @@ const Beranda = {
           <section class="join">
             <h2>Gabung Bersama Kami</h2>
             <div class="button">
-              <button><a href="">Join</a></button>
-              <button><a href="https://kitabisa.com/campaign/pohonkebaikanuntuklingkungan">Donasi</a></button>
+              <a href="#/join"><button>Join</button></a>
+              <a href="https://kitabisa.com/campaign/pohonkebaikanuntuklingkungan"><button>Donasi</button></a>
             </div>
           </section>
         </div>
