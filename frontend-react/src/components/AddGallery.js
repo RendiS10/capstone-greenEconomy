@@ -7,6 +7,7 @@ const AddGallery = () => {
   const [description, setDescription] = useState("");
   const [file, setFile] = useState("");
   const [preview, setPreview] = useState("");
+  const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
   const loadImage = (e) => {
@@ -27,9 +28,14 @@ const AddGallery = () => {
           "Content-type": "multipart/form-data",
         },
       });
-      navigate("/");
+      setMessage("Gallery added successfully!");
+      setTimeout(() => {
+        setMessage("");
+        navigate("/");
+      }, 2000);
     } catch (error) {
       console.log(error);
+      setMessage("Failed to add gallery.");
     }
   };
 
@@ -80,12 +86,16 @@ const AddGallery = () => {
             </div>
           </div>
 
-          {preview ? (
+          {preview && (
             <figure className="image is-128x128">
               <img src={preview} alt="Preview Image" />
             </figure>
-          ) : (
-            ""
+          )}
+
+          {message && (
+            <div className={`notification ${message.includes("successfully") ? "is-success" : "is-danger"}`}>
+              {message}
+            </div>
           )}
 
           <div className="field">
