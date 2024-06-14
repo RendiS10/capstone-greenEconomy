@@ -350,6 +350,10 @@ article{
 .card-body {
   border-top: solid 1px #000;
   font-size: 12px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
   padding: 1rem 1rem;
 }
 .card-body p {
@@ -400,7 +404,7 @@ article{
   box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.35); /* Menambah bayangan saat dihover */
 }
 
-.join button a {
+.join a button{
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -701,11 +705,13 @@ footer .bawah{
 }
 /*Halaman Join*/
 /*Halaman Join */
-.card-join{
+.card-join {
   border: #000 solid 1px;
   background-color: whitesmoke;
   border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .cards-project-join {
   gap: 1rem;
   width: 100%;
@@ -714,17 +720,146 @@ footer .bawah{
   flex-wrap: wrap;
   margin-top: 30px;
   margin-bottom: 50px;
-  }
-.card-join span{
+}
+
+.card-join span {
   display: flex;
   margin-top: 30px;
   justify-content: center;
   font-weight: bold;
 }
+
 .cards-project-join img {
   width: 10rem;
+}
+
+.cards-project-join .card {
+  border: 1px #000 solid;
+}
+
+.card-join:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+  .button-link {
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+}
+
+.small-button-join {
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #4CAF50; /* Warna hijau */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.small-button-join:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+
+/* Halaman Login */
+
+.login{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  width: 800px;
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.login-section, .signup-section {
+  width: 50%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.login-section {
+  background-color: #fff;
+}
+
+.signup-section {
+  background-image: url(../public/images/img_login.jpg);
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1-login {
+  margin-bottom: 20px;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-login {
+  margin-bottom: 5px;
+}
+
+.input-login {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00b140;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-button:hover {
+  background-color: #009933;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
   }
   
-  .cards-project-join .card {
-  border: 1px #000 solid;
+  .login-section, .signup-section {
+      width: 100%;
   }
+  
+  .signup-section {
+      padding: 20px;
+  }
+  
+  .h1-login {
+      text-align: center;
+  }
+  
+  .login-button {
+      width: 100%;
+  }
+}
