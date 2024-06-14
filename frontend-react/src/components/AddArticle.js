@@ -7,6 +7,7 @@ const AddArticle = () => {
   const [description, setDescription] = useState("");
   const [file, setFile] = useState("");
   const [preview, setPreview] = useState("");
+  const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
   const loadImage = (e) => {
@@ -27,9 +28,14 @@ const AddArticle = () => {
           "Content-type": "multipart/form-data",
         },
       });
-      navigate("/");
+      setMessage("Article added successfully!");
+      setTimeout(() => {
+        setMessage("");
+        navigate("/");
+      }, 2000);
     } catch (error) {
       console.log(error);
+      setMessage("Failed to add article.");
     }
   };
 
@@ -86,6 +92,12 @@ const AddArticle = () => {
             </figure>
           ) : (
             ""
+          )}
+
+          {message && (
+            <div className={`notification ${message.includes("successfully") ? "is-success" : "is-danger"}`}>
+              {message}
+            </div>
           )}
 
           <div className="field">
