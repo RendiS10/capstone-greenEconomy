@@ -5,6 +5,7 @@ import Login from '../views/pages/login';
 import DaftarArtikel from '../views/pages/daftar-artikel';
 import Kontak from '../views/pages/kontak';
 import Join from '../views/pages/join';
+
 import Donasi from '../views/pages/donasi';
 import Gallery from '../views/pages/daftar-gallery';
 import DetailGallery from '../views/pages/detail-gallery';

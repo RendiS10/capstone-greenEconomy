@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios from "../api/axios";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +8,7 @@ import Swal from 'sweetalert2';
 const truncateDescription = (description) => {
   return description.length > 50 ? description.substring(0, 50) + '...' : description;
 };
+
 
 const GalleryList = () => {
   const [galleries, setGalleries] = useState([]);

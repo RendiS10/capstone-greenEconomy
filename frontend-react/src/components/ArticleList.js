@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios from "../api/axios"; // Pastikan ini mengarah ke file axios yang benar
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
@@ -8,7 +8,6 @@ import Swal from 'sweetalert2';
 const truncateDescription = (description) => {
   return description.length > 50 ? description.substring(0, 50) + '...' : description;
 };
-
 const ArticleList = () => {
   const [articles, setArticles] = useState([]);
 
@@ -18,7 +17,6 @@ const ArticleList = () => {
 
   const getArticles = async () => {
     const response = await axios.get("http://localhost:5000/articles");
-    console.log(response.data);  // Tambahkan ini untuk memeriksa data
     setArticles(response.data);
   };
 

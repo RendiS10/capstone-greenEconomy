@@ -9,7 +9,6 @@ const DetailArtikel = {
             <p> <a href="#/beranda"> Beranda</a> >> <a href="#/detail-artikel/:id"> Detail Artikel </a></p>
           </div>
           <div class="detailImg" id="detail-article">
-            
           </div>
         </section>
       </article>
