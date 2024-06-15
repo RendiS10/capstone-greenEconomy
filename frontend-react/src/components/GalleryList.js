@@ -5,6 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
 
+const truncateDescription = (description) => {
+  return description.length > 300 ? description.substring(0, 300) + '...' : description;
+};
+
 const GalleryList = () => {
   const [galleries, setGalleries] = useState([]);
 
@@ -65,7 +69,7 @@ const GalleryList = () => {
             <tr key={gallery.id}>
               <td>{index + 1}</td>
               <td>{gallery.name}</td>
-              <td>{gallery.description}</td>
+              <td>{truncateDescription(gallery.description)}</td>
               <td>
                 <Link to={`/editgallery/${gallery.id}`}>
                   <FontAwesomeIcon icon={faEdit} />
