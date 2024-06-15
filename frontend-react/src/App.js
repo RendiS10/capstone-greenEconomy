@@ -5,6 +5,8 @@ import EditGallery from "./components/EditGallery";
 import AddArticle from "./components/AddArticle";
 import EditArticle from "./components/EditArticle";
 import Sidebar from "./components/Sidebar";
+import ArticleList from './components/ArticleList';
+import GalleryList from './components/GalleryList';
 import "bulma/css/bulma.css";
 import "./App.css"; // Custom CSS to style the layout
 
@@ -22,6 +24,8 @@ function App() {
             <Route path="editgallery/:id" element={<EditGallery />} />
             <Route path="addarticle/" element={<AddArticle />} />
             <Route path="editarticle/:id" element={<EditArticle />} />
+            <Route path="/articlelist" element={<ArticleList />} />
+            <Route path="/gallerylist" element={<GalleryList />} />
           </Routes>
         </div>
       </div>

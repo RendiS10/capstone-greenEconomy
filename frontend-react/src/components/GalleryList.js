@@ -25,44 +25,29 @@ const GalleryList = () => {
 
   return (
     <div className="container mt-5">
-      <Link to="/addgallery" className="button is-success">
-        Add New
-      </Link>
-      
-      <div className="columns is-multiline mt-2">
-        {galleries.map((gallery) => (
-          <div className="column is-one-quarter" key={gallery.id}>
-            <div className="card">
-              <div className="card-image">
-                <figure className="image is-4by3">
-                  <img src={gallery.url} alt="Image" />
-                </figure>
-              </div>
-
-              <div className="card-content">
-                <div className="media">
-                  <div className="media-content">
-                    <p className="title is-4">{gallery.name}</p>
-                    <p className="subtitle is-6">{gallery.description}</p>
-                  </div>
-                </div>
-              </div>
-
-              <footer className="card-footer">
-                <Link to={`editgallery/${gallery.id}`} className="card-footer-item">
-                  Edit
-                </Link>
-                <a
-                  onClick={() => deleteGallery(gallery.id)}
-                  className="card-footer-item"
-                >
-                  Delete
-                </a>
-              </footer>
-            </div>
-          </div>
-        ))}
-      </div>
+      <table className="table is-striped is-fullwidth">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {galleries.map((gallery, index) => (
+            <tr key={gallery.id}>
+              <td>{index + 1}</td>
+              <td>{gallery.name}</td>
+              <td>{gallery.description}</td>
+              <td>
+                <Link to={`/editgallery/${gallery.id}`}>Edit</Link>
+                <button onClick={() => deleteGallery(gallery.id)}>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

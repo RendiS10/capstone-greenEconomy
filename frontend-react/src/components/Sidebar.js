@@ -15,6 +15,12 @@ const Sidebar = () => {
         <li>
           <Link to="/addgallery">Tambah Data Gallery</Link>
         </li>
+        <li>
+          <Link to="/gallerylist">Gallery List</Link>
+        </li>
+        <li>
+          <Link to="/articlelist">Article List</Link>
+        </li>
       </ul>
     </aside>
   );

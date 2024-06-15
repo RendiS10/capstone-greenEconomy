@@ -25,44 +25,29 @@ const ArticleList = () => {
 
   return (
     <div className="container mt-5">
-      <Link to="/addarticle" className="button is-success">
-        Add New
-      </Link>
-      
-      <div className="columns is-multiline mt-2">
-        {articles.map((article) => (
-          <div className="column is-one-quarter" key={article.id}>
-            <div className="card">
-              <div className="card-image">
-                <figure className="image is-4by3">
-                  <img src={article.url} alt="Image" />
-                </figure>
-              </div>
-
-              <div className="card-content">
-                <div className="media">
-                  <div className="media-content">
-                    <p className="title is-4">{article.name}</p>
-                    <p className="subtitle is-6">{article.description}</p>
-                  </div>
-                </div>
-              </div>
-
-              <footer className="card-footer">
-                <Link to={`editarticle/${article.id}`} className="card-footer-item">
-                  Edit
-                </Link>
-                <a
-                  onClick={() => deleteArticle(article.id)}
-                  className="card-footer-item"
-                >
-                  Delete
-                </a>
-              </footer>
-            </div>
-          </div>
-        ))}
-      </div>
+      <table className="table is-striped is-fullwidth">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {articles.map((article, index) => (
+            <tr key={article.id}>
+              <td>{index + 1}</td>
+              <td>{article.title}</td>
+              <td>{article.description}</td>
+              <td>
+                <Link to={`/editarticle/${article.id}`}>Edit</Link>
+                <button onClick={() => deleteArticle(article.id)}>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
