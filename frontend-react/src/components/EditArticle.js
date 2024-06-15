@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 const EditArticle = () => {
   const [title, setTitle] = useState("");
@@ -34,16 +35,40 @@ const EditArticle = () => {
     formData.append("file", file);
     formData.append("title", title);
     formData.append("description", description);
-    try {
-      await axios.patch(`http://localhost:5000/articles/${id}`, formData, {
-        headers: {
-          "Content-type": "multipart/form-data",
-        },
-      });
-      navigate("/");
-    } catch (error) {
-      console.log(error);
-    }
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "Do you want to save the changes?",
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, save it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.patch(`http://localhost:5000/articles/${id}`, formData, {
+          headers: {
+            "Content-type": "multipart/form-data",
+          },
+        })
+        .then(() => {
+          Swal.fire(
+            'Updated!',
+            'Your article has been updated.',
+            'success'
+          );
+          navigate("/");
+        })
+        .catch(error => {
+          console.error('Error updating the article:', error);
+          Swal.fire(
+            'Error!',
+            'Failed to update the article.',
+            'error'
+          );
+        });
+      }
+    });
   };
 
   return (

@@ -1,0 +1,37 @@
+/* App.css */
+html, body {
+  height: 100%;
+}
+
+.columns {
+  min-height: 100vh;
+}
+
+.menu {
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.menu-list li:hover {
+  background-color: #f0f0f0; /* Warna latar saat hover */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Animasi transisi */
+}
+
+.menu-list li:active {
+  border: 2px solid #4CAF50; /* Border saat aktif */
+}
+.container {
+  display: flex;
+  flex-direction: column;  
+  gap: 0; 
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+

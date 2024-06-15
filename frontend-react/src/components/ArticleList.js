@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
+
+const truncateDescription = (description) => {
+  return description.length > 50 ? description.substring(0, 50) + '...' : description;
+};
 
 const ArticleList = () => {
   const [articles, setArticles] = useState([]);
@@ -11,58 +18,81 @@ const ArticleList = () => {
 
   const getArticles = async () => {
     const response = await axios.get("http://localhost:5000/articles");
+    console.log(response.data);  // Tambahkan ini untuk memeriksa data
     setArticles(response.data);
   };
 
   const deleteArticle = async (articleId) => {
-    try {
-      await axios.delete(`http://localhost:5000/articles/${articleId}`);
-      getArticles();
-    } catch (error) {
-      console.log(error);
-    }
+    Swal.fire({
+      name: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.delete(`http://localhost:5000/articles/${articleId}`)
+          .then(() => {
+            Swal.fire(
+              'Deleted!',
+              'Your file has been deleted.',
+              'success'
+            );
+            // Refresh the articles list
+            getArticles();
+          })
+          .catch(error => {
+            console.error('Error deleting the article:', error);
+            Swal.fire(
+              'Error!',
+              'Failed to delete the article.',
+              'error'
+            );
+          });
+      }
+    });
   };
 
   return (
     <div className="container mt-5">
-      <Link to="/addarticle" className="button is-success">
-        Add New
-      </Link>
-      
-      <div className="columns is-multiline mt-2">
-        {articles.map((article) => (
-          <div className="column is-one-quarter" key={article.id}>
-            <div className="card">
-              <div className="card-image">
-                <figure className="image is-4by3">
-                  <img src={article.url} alt="Image" />
-                </figure>
-              </div>
-
-              <div className="card-content">
-                <div className="media">
-                  <div className="media-content">
-                    <p className="title is-4">{article.name}</p>
-                    <p className="subtitle is-6">{article.description}</p>
-                  </div>
-                </div>
-              </div>
-
-              <footer className="card-footer">
-                <Link to={`editarticle/${article.id}`} className="card-footer-item">
-                  Edit
+     <nav style={{ backgroundColor: '#81A263', padding: '10px 20px' , display : 'flex' , justifyContent : 'center' , color : 'black' }}>
+        <strong>Green Sustainify Article List Option</strong>
+      </nav>
+      <table className="table is-striped is-fullwidth">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th style={{ textAlign: 'center' }}>Title</th>
+            <th style={{ textAlign: 'center' }}>Description</th>
+            <th style={{ textAlign: 'center' }}>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {articles.map((article, index) => (
+            <tr key={article.id}>
+              <td style={{ textAlign: 'center' }}>
+                {index + 1}
+              </td>
+              <td>
+                {article.name}
+              </td>
+              <td style={{ textAlign: 'center' }}>
+                {truncateDescription(article.description)}
+              </td>
+              <td style={{ textAlign: 'center', width: '20%' }}>
+                <Link to={`/editarticle/${article.id}`} style={{ marginRight: '1rem' }}>
+                  <FontAwesomeIcon icon={faEdit} style={{ fontSize: '1.25rem' }} />
                 </Link>
-                <a
-                  onClick={() => deleteArticle(article.id)}
-                  className="card-footer-item"
-                >
-                  Delete
-                </a>
-              </footer>
-            </div>
-          </div>
-        ))}
-      </div>
+                <button onClick={() => deleteArticle(article.id)} style={{ fontSize: '1.25rem' }}>
+                  <FontAwesomeIcon icon={faTrashAlt} />
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
