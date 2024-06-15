@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios from "../api/axios"; // Pastikan ini mengarah ke file axios yang benar
 import { useParams, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 
@@ -73,6 +73,10 @@ const EditArticle = () => {
   };
 
   return (
+    <div>
+    <nav style={{ backgroundColor: '#81A263', padding: '10px 20px' , display : 'flex' , justifyContent : 'center' , color : 'black' }}>
+    <strong>Halaman Edit Data Artikel </strong>
+    </nav>
     <div className="columns is-centered mt-5">
       <div className="column is-half">
         <form onSubmit={updateArticle}>
@@ -135,6 +139,7 @@ const EditArticle = () => {
             </div>
           </div>
         </form>
+      </div>
       </div>
     </div>
   );

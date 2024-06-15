@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import axios from "../api/axios"; // Pastikan ini mengarah ke file axios yang benar
 import { useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 
@@ -8,7 +8,6 @@ const AddGallery = () => {
   const [description, setDescription] = useState("");
   const [file, setFile] = useState("");
   const [preview, setPreview] = useState("");
-  const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
   const loadImage = (e) => {
@@ -41,77 +40,75 @@ const AddGallery = () => {
 
   return (
     <div>
-      <nav style={{ backgroundColor: '#81A263', padding: '10px 20px', display: 'flex', justifyContent: 'center', color: 'black' }}>
-        <strong>Add Gallery</strong>
+      
+    <nav style={{ backgroundColor: '#81A263', padding: '10px 20px' , display : 'flex' , justifyContent : 'center' , color : 'black' }}>
+        <strong>Halaman Menambah Data Galeri </strong>
       </nav>
-      <div className="columns is-centered mt-5">
-        <div className="column is-half">
-          <form onSubmit={saveGallery}>
-            <div className="field">
-              <label className="label">Gallery Name</label>
-              <div className="control">
-                <input
-                  type="text"
-                  className="input"
-                  value={title}
-                  onChange={(e) => setTitle(e.target.value)}
-                  placeholder="Gallery Name"
-                />
+ 
+    <div className="columns is-centered mt-5">
+      <div className="column is-half">
+        <form onSubmit={saveGallery}>
+          <div className="field">
+            <label className="label">Gallery Name</label>
+            <div className="control">
+              <input
+                type="text"
+                className="input"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="Gallery Name"
+              />
+            </div>
+          </div>
+
+          <div className="field">
+            <label className="label">Description</label>
+            <div className="control">
+              <textarea
+                className="textarea"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                placeholder="Gallery Description"
+              />
+            </div>
+          </div>
+
+          <div className="field">
+            <label className="label">Image</label>
+            <div className="control">
+              <div className="file">
+                <label className="file-label">
+                  <input
+                    type="file"
+                    className="file-input"
+                    onChange={loadImage}
+                  />
+                  <span className="file-cta">
+                    <span className="file-label">Choose a file...</span>
+                  </span>
+                </label>
               </div>
             </div>
+          </div>
 
-            <div className="field">
-              <label className="label">Description</label>
-              <div className="control">
-                <textarea
-                  className="textarea"
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                  placeholder="Gallery Description"
-                />
-              </div>
+          {preview ? (
+            <figure className="image is-128x128">
+              <img src={preview} alt="Preview Image" />
+            </figure>
+          ) : (
+            ""
+          )}
+
+          <div className="field">
+            <div className="control">
+              <button type="submit" className="button is-success">
+                Save
+              </button>
             </div>
-
-            <div className="field">
-              <label className="label">Image</label>
-              <div className="control">
-                <div className="file">
-                  <label className="file-label">
-                    <input
-                      type="file"
-                      className="file-input"
-                      onChange={loadImage}
-                    />
-                    <span className="file-cta">
-                      <span className="file-label">Choose a file...</span>
-                    </span>
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            {preview && (
-              <figure className="image is-128x128">
-                <img src={preview} alt="Preview Image" />
-              </figure>
-            )}
-
-            {message && (
-              <div className={`notification ${message.includes("successfully") ? "is-success" : "is-danger"}`}>
-                {message}
-              </div>
-            )}
-
-            <div className="field">
-              <div className="control">
-                <button type="submit" className="button is-success">
-                  Save
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
+    </div>   
     </div>
   );
 };

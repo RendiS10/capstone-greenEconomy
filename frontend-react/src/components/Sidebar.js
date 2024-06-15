@@ -16,15 +16,16 @@ const Sidebar = () => {
           </Link>
         </li>
         <li className="menu-item" style={{ cursor: 'pointer', transition: 'background-color 0.3s ease' }}>
-          <Link to="/addarticle" style={{ display: 'block', padding: '10px', color: 'black' }} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#365E32'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'} onMouseDown={(e) => e.currentTarget.style.border = '2px solid #4CAF50'} onMouseUp={(e) => e.currentTarget.style.border = 'none'}>
-            <FontAwesomeIcon icon={faPlus} /> Tambah Data Artikel
-          </Link>
-        </li>
-        <li className="menu-item" style={{ cursor: 'pointer', transition: 'background-color 0.3s ease' }}>
           <Link to="/addgallery" style={{ display: 'block', padding: '10px', color: 'black' }} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#365E32'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'} onMouseDown={(e) => e.currentTarget.style.border = '2px solid #4CAF50'} onMouseUp={(e) => e.currentTarget.style.border = 'none'}>
             <FontAwesomeIcon icon={faImage} /> Tambah Data Gallery
           </Link>
         </li>
+        <li className="menu-item" style={{ cursor: 'pointer', transition: 'background-color 0.3s ease' }}>
+          <Link to="/addarticle" style={{ display: 'block', padding: '10px', color: 'black' }} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#365E32'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'} onMouseDown={(e) => e.currentTarget.style.border = '2px solid #4CAF50'} onMouseUp={(e) => e.currentTarget.style.border = 'none'}>
+            <FontAwesomeIcon icon={faPlus} /> Tambah Data Artikel
+          </Link>
+        </li>
+       
         <li className="menu-item" style={{ cursor: 'pointer', transition: 'background-color 0.3s ease' }}>
           <Link to="/gallerylist" style={{ display: 'block', padding: '10px', color: 'black' }} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#365E32'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'} onMouseDown={(e) => e.currentTarget.style.border = '2px solid #4CAF50'} onMouseUp={(e) => e.currentTarget.style.border = 'none'}>
             <FontAwesomeIcon icon={faList} /> Gallery List

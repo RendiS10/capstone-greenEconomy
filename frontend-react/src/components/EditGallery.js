@@ -72,6 +72,10 @@ const EditGallery = () => {
   };
 
   return (
+    <div>
+    <nav style={{ backgroundColor: '#81A263', padding: '10px 20px' , display : 'flex' , justifyContent : 'center' , color : 'black' }}>
+    <strong>Halaman Edit Data Galeri </strong>
+    </nav>
     <div className="columns is-centered mt-5">
       <div className="column is-half">
         <form onSubmit={updateGallery}>
@@ -134,6 +138,7 @@ const EditGallery = () => {
             </div>
           </div>
         </form>
+      </div>
       </div>
     </div>
   );
