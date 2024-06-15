@@ -1,0 +1,81 @@
+@media screen and (min-width: 650px) {
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+ 
+  .app-bar .app-bar__brand h1 {
+    font-size: 1.5em;
+  }
+ 
+  .app-bar .app-bar__menu {
+    display: none;
+  }
+ 
+  .app-bar .app-bar__navigation {
+    position: static;
+    width: 100%;
+  }
+ 
+  .app-bar .app-bar__navigation ul li {
+    display: inline-block;
+  }
+ 
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+}
+ 
+@media screen and (min-width: 800px) {
+  .app-bar .app-bar__brand h1 {
+    font-size: 2em;
+  }
+}
+
+/*Beranda*/
+@media screen and (max-width: 975px) {
+  .about{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .aboutImg{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cards-project{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  }
+  
+  @media screen and (max-width: 750px){
+    article{
+      display: flex;
+      flex-direction: column;
+      padding: 0 30px;
+      justify-content: center;
+      gap: 5rem;
+    }
+    .cards-project{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .join .button{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  @media screen and (max-width: 390px){
+    .cards-project{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+  }
