@@ -18,12 +18,13 @@ const ArticleList = () => {
 
   const getArticles = async () => {
     const response = await axios.get("http://localhost:5000/articles");
+    console.log(response.data);  // Tambahkan ini untuk memeriksa data
     setArticles(response.data);
   };
 
   const deleteArticle = async (articleId) => {
     Swal.fire({
-      title: 'Are you sure?',
+      name: 'Are you sure?',
       text: "You won't be able to revert this!",
       icon: 'warning',
       showCancelButton: true,
@@ -56,29 +57,39 @@ const ArticleList = () => {
 
   return (
     <div className="container mt-5">
+      <h1><strong>
+        Article List
+        </strong>
+        </h1>
       <table className="table is-striped is-fullwidth">
         <thead>
           <tr>
             <th>No</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Actions</th>
+            <th style={{ textAlign: 'center' }}>Title</th>
+            <th style={{ textAlign: 'center' }}>Description</th>
+            <th style={{ textAlign: 'center' }}>Actions</th>
           </tr>
         </thead>
         <tbody>
           {articles.map((article, index) => (
             <tr key={article.id}>
-              <td>{index + 1}</td>
-              <td>{article.title}</td>
-              <td>{truncateDescription(article.description)}</td>
+              <td style={{ textAlign: 'center' }}>
+                {index + 1}
+              </td>
               <td>
-  <Link to={`/editarticle/${article.id}`}>
-    <FontAwesomeIcon icon={faEdit} />
-  </Link>
-  <button onClick={() => deleteArticle(article.id)}>
-    <FontAwesomeIcon icon={faTrashAlt} />
-  </button>
-</td>
+                {article.name}
+              </td>
+              <td style={{ textAlign: 'center' }}>
+                {truncateDescription(article.description)}
+              </td>
+              <td style={{ textAlign: 'center', width: '20%' }}>
+                <Link to={`/editarticle/${article.id}`} style={{ marginRight: '1rem' }}>
+                  <FontAwesomeIcon icon={faEdit} style={{ fontSize: '1.25rem' }} />
+                </Link>
+                <button onClick={() => deleteArticle(article.id)} style={{ fontSize: '1.25rem' }}>
+                  <FontAwesomeIcon icon={faTrashAlt} />
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>

@@ -55,26 +55,33 @@ const GalleryList = () => {
 
   return (
     <div className="container mt-5">
+      <h1>Gallery List</h1>
       <table className="table is-striped is-fullwidth">
         <thead>
           <tr>
             <th>No</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Actions</th>
+            <th style={{ textAlign: 'center' }}>Name</th>
+            <th style={{ textAlign: 'center' }}>Description</th>
+            <th style={{ textAlign: 'center' }}>Actions</th>
           </tr>
         </thead>
         <tbody>
           {galleries.map((gallery, index) => (
             <tr key={gallery.id}>
-              <td>{index + 1}</td>
-              <td>{gallery.name}</td>
-              <td>{truncateDescription(gallery.description)}</td>
+              <td style={{ textAlign: 'center' }}>
+                {index + 1}
+              </td>
               <td>
-                <Link to={`/editgallery/${gallery.id}`}>
-                  <FontAwesomeIcon icon={faEdit} />
+                {gallery.name}
+              </td>
+              <td style={{ textAlign: 'center' }}>
+                {truncateDescription(gallery.description)}
+              </td>
+              <td style={{ textAlign: 'center', width: '20%' }}>
+                <Link to={`/editgallery/${gallery.id}`} style={{ marginRight: '1rem' }}>
+                  <FontAwesomeIcon icon={faEdit} style={{ fontSize: '1.25rem' }} />
                 </Link>
-                <button onClick={() => deleteGallery(gallery.id)}>
+                <button onClick={() => deleteGallery(gallery.id)} style={{ fontSize: '1.25rem' }}>
                   <FontAwesomeIcon icon={faTrashAlt} />
                 </button>
               </td>
