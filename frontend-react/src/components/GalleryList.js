@@ -6,7 +6,7 @@ import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
 
 const truncateDescription = (description) => {
-  return description.length > 300 ? description.substring(0, 300) + '...' : description;
+  return description.length > 50 ? description.substring(0, 50) + '...' : description;
 };
 
 const GalleryList = () => {
@@ -55,7 +55,9 @@ const GalleryList = () => {
 
   return (
     <div className="container mt-5">
-      <h1>Gallery List</h1>
+       <nav style={{ backgroundColor: '#81A263', padding: '10px 20px' , display : 'flex' , justifyContent : 'center' , color : 'black' }}>
+        <strong>Green Sustainify Gallery List Option</strong>
+      </nav>
       <table className="table is-striped is-fullwidth">
         <thead>
           <tr>

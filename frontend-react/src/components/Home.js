@@ -17,6 +17,9 @@ const Home = () => {
 
   return (
     <div>
+      <nav style={{ backgroundColor: '#81A263', padding: '10px 20px' , display : 'flex' , justifyContent : 'center' , color : 'black' }}>
+        <strong>Green Sustainify Total Data</strong>
+      </nav>
       <div className="tile is-ancestor">
         <div className="tile is-parent">
           <article className="tile is-child box notification is-primary">
