@@ -31,7 +31,7 @@ const DetailArtikel = {
         <h2>${article.name}</h2>
         <picture>
           <source srcset="${article.url} 480w, ${article.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
-          <img src="${article.url}" alt="${article.name}" loading="lazy" />
+          <img src="${article.url}" alt="${article.name}" class = "lazyload" />
         </picture>
         <p>${article.description}</p>
       `;

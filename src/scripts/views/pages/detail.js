@@ -10,7 +10,7 @@ const Detail = {
       <div class="detailImg">
         <picture>
           <source srcset="images/image_2.webp 480w, images/image_2.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
-          <img src="images/image_2.png" alt="" loading="lazy" />
+          <img src="images/image_2.png" alt="" class = "lazyload" />
         </picture>
       </div>
       <div class="detailAboutDescription">

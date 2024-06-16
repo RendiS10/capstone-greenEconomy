@@ -9,7 +9,7 @@ const Beranda = {
           <div class="aboutImg">
             <picture>
               <source srcset="images/image_2.webp 480w, images/image_2.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
-              <img src="images/image_2.png" alt="" loading="lazy" />
+              <img src="images/image_2.png" alt="" class = "lazyload" />
             </picture>
           </div>
           <div class="aboutDescription">
@@ -73,7 +73,7 @@ const Beranda = {
           <div class="card">
             <picture>
               <source srcset="${gallery.url} 480w, ${gallery.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
-              <img src="${gallery.url}" alt="${gallery.name}" loading="lazy" />
+              <img src="${gallery.url}" alt="${gallery.name}" class = "lazyload" />
             </picture>
             <div class="card-body">
               <h3>${gallery.name}</h3>
@@ -94,7 +94,7 @@ const Beranda = {
           <div class="card-article">
             <picture>
               <source srcset="${article.url} 480w, ${article.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
-              <img src="${article.url}" alt="${article.name}" loading="lazy" />
+              <img src="${article.url}" alt="${article.name}" class = "lazyload" />
             </picture>
             <div class="card-article-body">
               <h3>${article.name}</h3>

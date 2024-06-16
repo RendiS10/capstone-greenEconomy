@@ -29,7 +29,7 @@ const Gallery = {
           <div class="card">
             <picture>
               <source srcset="${gallery.url} 480w, ${gallery.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
-              <img src="${gallery.url}" alt="${gallery.name}" loading="lazy" />
+              <img src="${gallery.url}" alt="${gallery.name}" class = "lazyload" />
             </picture>
             <div class="card-body">
             <h3>Judul : ${gallery.name}</h3>
