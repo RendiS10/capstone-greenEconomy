@@ -14,7 +14,7 @@ const Join = {
           <div class="cards-project-join">
             <div class="card">
             <picture>
-              <source srcset="images/gdsate.webp 480w, images/gdsate.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <source srcset="images/gdsate-small.jpg 480w, images/gdsate-large.jpg 800w" sizes="(max-width: 600px) 480px, 800px" type="image/jpg">
               <img src="images/gdsate.jpg" alt="" class = "lazyload" />
             </picture>
           <div class="card-body">
@@ -26,7 +26,7 @@ const Join = {
           </div>
           <div class="card">
             <picture>
-              <source srcset="images/pesona-Surabaya.webp 480w, images/pesona-Surabaya.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <source srcset="images/pesona-Surabaya-small.jpg 480w, images/pesona-Surabaya-large.jpg 800w" sizes="(max-width: 600px) 480px, 800px" type="image/jpg">
               <img src="images/pesona-Surabaya.jpg" alt="" class = "lazyload" />
             </picture>
           <div class="card-body">
@@ -38,7 +38,7 @@ const Join = {
           </div>
           <div class="card">
             <picture>
-              <source srcset="images/jogja.webp 480w, images/jogja.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <source srcset="images/jogja-small.jpg 480w, images/jogja-large.jpg 800w" sizes="(max-width: 600px) 480px, 800px" type="image/jpg">
               <img src="images/jogja.jpg" alt="" class = "lazyload" />
             </picture>
             <div class="card-body">
@@ -50,7 +50,7 @@ const Join = {
           </div>
           <div class="card">
             <picture>
-              <source srcset="images/cimahi.webp 480w, images/cimahi.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <source srcset="images/cimahi-small.jpg 480w, images/cimahi-large.jpg 800w" sizes="(max-width: 600px) 480px, 800px" type="image/jpg">
               <img src="images/cimahi.jpg" alt="" class = "lazyload" />
             </picture>
             <div class="card-body">

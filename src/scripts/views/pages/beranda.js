@@ -8,7 +8,7 @@ const Beranda = {
         <section class="about">
           <div class="aboutImg">
             <picture>
-              <source srcset="images/image_2.webp 480w, images/image_2.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <source srcset="images/image_2-small.jpg 480w, images/image_2-large.jpg 800w" sizes="(max-width: 600px) 480px, 800px" type="image/jpg">
               <img src="images/image_2.png" alt="" class = "lazyload" />
             </picture>
           </div>
@@ -72,7 +72,7 @@ const Beranda = {
         <a href="#/detail-gallery/${gallery.id}">
           <div class="card">
             <picture>
-              <source srcset="${gallery.url} 480w, ${gallery.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <source srcset="${gallery.url} 480w, ${gallery.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/jpg">
               <img src="${gallery.url}" alt="${gallery.name}" class = "lazyload" />
             </picture>
             <div class="card-body">
@@ -93,7 +93,7 @@ const Beranda = {
         <a href="#/detail-artikel/${article.id}">
           <div class="card-article">
             <picture>
-              <source srcset="${article.url} 480w, ${article.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <source srcset="${article.url} 480w, ${article.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/jpg">
               <img src="${article.url}" alt="${article.name}" class = "lazyload" />
             </picture>
             <div class="card-article-body">
