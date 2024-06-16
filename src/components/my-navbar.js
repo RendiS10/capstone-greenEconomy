@@ -13,7 +13,7 @@ class MyNavbar extends HTMLElement {
             <li><a href="#/beranda">Beranda</a></li>
             <li><a href="#/daftar-artikel">Artikel</a></li>
             <li><a href="#/daftar-gallery">Gallery</a></li>
-            <li><a href="#/login" class="navbar-login">Login</a></li>
+            <li><a href="http://localhost:3000/" class="navbar-login">Login</a></li>
           </ul>
         </nav>
       </header>
