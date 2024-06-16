@@ -1,6 +1,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -30,10 +34,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'] // Added preset for React
-          }
-        }
-      }
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
+      },
     ],
   },
   plugins: [
@@ -44,10 +48,34 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/public/'),
-          to: path.resolve(__dirname, 'dist/'),
+          from: path.resolve(__dirname, 'src/public'),
+          to: path.resolve(__dirname, 'dist'),
+          globOptions: {
+            // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
+            ignore: ['**/images/**'],
+          },
         },
       ],
     }),
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
+      ],
+    }),
+    new ImageminWebpWebpackPlugin({
+      config: [
+        {
+          test: /\.(jpe?g|png)/,
+          options: {
+            quality: 50,
+          },
+        },
+      ],
+      overrideExtension: true,
+    }),
+    new CleanWebpackPlugin(),
   ],
 };

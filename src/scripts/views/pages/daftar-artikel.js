@@ -29,7 +29,10 @@ const DaftarArtikel = {
       const truncatedDescription = `${article.description.substring(0, 250)}...`;
       const articleElement = `
     <div class="article-body">
-      <img src="${article.url}" alt="${article.name}" />
+      <picture>
+        <source srcset="${article.url} 480w, ${article.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+        <img src="${article.url}" alt="${article.name}" loading="lazy" />
+      </picture>
       <div class="textArtikel">
         <h3>${article.name}</h3>
         <p>${truncatedDescription}<a href="#/detail-artikel/${article.id}"> 

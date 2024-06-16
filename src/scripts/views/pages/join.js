@@ -13,10 +13,10 @@ const Join = {
        
           <div class="cards-project-join">
             <div class="card">
-            <img
-              src="images/gdsate.jpg"
-              alt=""
-            />
+            <picture>
+              <source srcset="images/gdsate.webp 480w, images/gdsate.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <img src="images/gdsate.jpg" alt="" loading="lazy" />
+            </picture>
           <div class="card-body">
             <h3>Bandung</h3>
          <a href="https://chat.whatsapp.com/DgauoOuA7jr7qoMth2nlUo class="button-link">
@@ -25,10 +25,10 @@ const Join = {
             </div>
           </div>
           <div class="card">
-            <img
-              src="images/pesona-Surabaya.jpg"
-              alt=""
-            />
+            <picture>
+              <source srcset="images/pesona-Surabaya.webp 480w, images/pesona-Surabaya.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <img src="images/pesona-Surabaya.jpg" alt="" loading="lazy" />
+            </picture>
           <div class="card-body">
             <h3>Surabaya</h3>
         <a href="https://chat.whatsapp.com/LQ1xtHDerUfBPAEykyJ4Jy" class="button-link">
@@ -37,10 +37,10 @@ const Join = {
             </div>
           </div>
           <div class="card">
-            <img
-          src="images/jogja.jpg"
-              alt=""
-            />
+            <picture>
+              <source srcset="images/jogja.webp 480w, images/jogja.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <img src="images/jogja.jpg" alt="" loading="lazy" />
+            </picture>
             <div class="card-body">
               <h3>Yogyakarta</h3>
             <a href="https://chat.whatsapp.com/CxBUDKbaReqBAz7IsMYNl2" class="button-link">
@@ -49,10 +49,10 @@ const Join = {
             </div>
           </div>
           <div class="card">
-            <img
-              src="images/cimahi.jpeg"
-              alt=""
-            />
+            <picture>
+              <source srcset="images/cimahi.webp 480w, images/cimahi.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <img src="images/cimahi.jpg" alt="" loading="lazy" />
+            </picture>
             <div class="card-body">
               <h3>Cimahi</h3>
               <a href="https://chat.whatsapp.com/G8SgTEodgvR28lfWmubjD0" class="button-link">
