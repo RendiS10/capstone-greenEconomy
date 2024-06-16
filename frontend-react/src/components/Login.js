@@ -6,6 +6,7 @@ import '../styles/styles.css'; // Make sure this points to your CSS file
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -18,6 +19,8 @@ const Login = () => {
       localStorage.setItem('token', response.data.token);
       navigate('/');
     } catch (error) {
+      // Menangkap error dari response dan menampilkan pesan yang sesuai
+      setError('Nama pengguna atau kata sandi salah');
       console.error('Login failed:', error);
     }
   };
@@ -52,6 +55,8 @@ const Login = () => {
               />
             </div>
           </div>
+
+          {error && <p className="help is-danger">{error}</p>} {/* Menampilkan pesan error jika ada */}
 
           <div className="field">
             <div className="control">

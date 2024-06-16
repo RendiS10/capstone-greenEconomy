@@ -31,7 +31,7 @@ const DaftarArtikel = {
     <div class="article-body">
       <picture>
         <source srcset="${article.url} 480w, ${article.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
-        <img src="${article.url}" alt="${article.name}" loading="lazy" />
+        <img src="${article.url}" alt="${article.name}" class = "lazyload" />
       </picture>
       <div class="textArtikel">
         <h3>${article.name}</h3>

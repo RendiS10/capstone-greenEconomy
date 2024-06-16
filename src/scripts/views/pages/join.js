@@ -15,7 +15,7 @@ const Join = {
             <div class="card">
             <picture>
               <source srcset="images/gdsate.webp 480w, images/gdsate.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
-              <img src="images/gdsate.jpg" alt="" loading="lazy" />
+              <img src="images/gdsate.jpg" alt="" class = "lazyload" />
             </picture>
           <div class="card-body">
             <h3>Bandung</h3>
@@ -27,7 +27,7 @@ const Join = {
           <div class="card">
             <picture>
               <source srcset="images/pesona-Surabaya.webp 480w, images/pesona-Surabaya.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
-              <img src="images/pesona-Surabaya.jpg" alt="" loading="lazy" />
+              <img src="images/pesona-Surabaya.jpg" alt="" class = "lazyload" />
             </picture>
           <div class="card-body">
             <h3>Surabaya</h3>
@@ -39,7 +39,7 @@ const Join = {
           <div class="card">
             <picture>
               <source srcset="images/jogja.webp 480w, images/jogja.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
-              <img src="images/jogja.jpg" alt="" loading="lazy" />
+              <img src="images/jogja.jpg" alt="" class = "lazyload" />
             </picture>
             <div class="card-body">
               <h3>Yogyakarta</h3>
@@ -51,7 +51,7 @@ const Join = {
           <div class="card">
             <picture>
               <source srcset="images/cimahi.webp 480w, images/cimahi.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
-              <img src="images/cimahi.jpg" alt="" loading="lazy" />
+              <img src="images/cimahi.jpg" alt="" class = "lazyload" />
             </picture>
             <div class="card-body">
               <h3>Cimahi</h3>
