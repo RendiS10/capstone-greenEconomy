@@ -31,7 +31,10 @@ const DetailGallery = {
 
       const detailGalleryElement = document.getElementById('detail-gallery');
       detailGalleryElement.innerHTML = `
-        <img src="${gallery.url}" alt="${gallery.name}" />
+        <picture>
+          <source srcset="${gallery.url} 480w, ${gallery.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+          <img src="${gallery.url}" alt="${gallery.name}" loading="lazy" />
+        </picture>
         <p>${gallery.description}</p>
       `;
     } catch (error) {

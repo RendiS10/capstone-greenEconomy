@@ -27,7 +27,10 @@ const Gallery = {
       const galleryElement = `
         <a href="#/detail-gallery/${gallery.id}">
           <div class="card">
-            <img src="${gallery.url}" alt="${gallery.name}" />
+            <picture>
+              <source srcset="${gallery.url} 480w, ${gallery.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <img src="${gallery.url}" alt="${gallery.name}" loading="lazy" />
+            </picture>
             <div class="card-body">
             <h3>Judul : ${gallery.name}</h3>
             </div>

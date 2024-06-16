@@ -29,7 +29,10 @@ const DetailArtikel = {
       const detailArticleElement = document.getElementById('detail-article');
       detailArticleElement.innerHTML = `
         <h2>${article.name}</h2>
-        <img src="${article.url}" alt="${article.name}" />
+        <picture>
+          <source srcset="${article.url} 480w, ${article.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+          <img src="${article.url}" alt="${article.name}" loading="lazy" />
+        </picture>
         <p>${article.description}</p>
       `;
     } catch (error) {

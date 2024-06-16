@@ -7,7 +7,10 @@ const Beranda = {
       <article>
         <section class="about">
           <div class="aboutImg">
-            <img src="images/image_2.png" alt="" />
+            <picture>
+              <source srcset="images/image_2.webp 480w, images/image_2.webp 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <img src="images/image_2.png" alt="" loading="lazy" />
+            </picture>
           </div>
           <div class="aboutDescription">
             <p>
@@ -68,7 +71,10 @@ const Beranda = {
       const galleryElement = `
         <a href="#/detail-gallery/${gallery.id}">
           <div class="card">
-            <img src="${gallery.url}" alt="${gallery.name}" />
+            <picture>
+              <source srcset="${gallery.url} 480w, ${gallery.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <img src="${gallery.url}" alt="${gallery.name}" loading="lazy" />
+            </picture>
             <div class="card-body">
               <h3>${gallery.name}</h3>
             </div>
@@ -86,7 +92,10 @@ const Beranda = {
       const articleElement = `
         <a href="#/detail-artikel/${article.id}">
           <div class="card-article">
-            <img src="${article.url}" alt="${article.name}" />
+            <picture>
+              <source srcset="${article.url} 480w, ${article.url} 800w" sizes="(max-width: 600px) 480px, 800px" type="image/webp">
+              <img src="${article.url}" alt="${article.name}" loading="lazy" />
+            </picture>
             <div class="card-article-body">
               <h3>${article.name}</h3>
             </div>
