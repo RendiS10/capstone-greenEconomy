@@ -7,6 +7,7 @@ import '../styles/responsive.css';
 import App from './views/app';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import swRegister from './utils/sw-register';
 
 const START = 10;
 const NUMBER_OF_IMAGES = 100;
@@ -23,4 +24,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });

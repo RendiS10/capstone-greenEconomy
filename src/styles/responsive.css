@@ -234,3 +234,30 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
+
+@media (max-width: 768px) {
+  footer {
+    padding: 10px;
+    text-align: center;
+  }
+  footer .atas {
+    flex-direction: column;
+  }
+  footer .footerImg img {
+    width: 100%;
+  }
+  footer .nama, footer .contact, footer .followUs {
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .atas, footer .footerImg, footer .nama, footer .contact, footer .followUs {
+    display: none; /* Menyembunyikan elemen-elemen ini */
+  }
+  footer {
+    text-align: center;
+    padding: 10px;
+  }
+}

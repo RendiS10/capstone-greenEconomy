@@ -6,10 +6,13 @@ const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
+    sw: path.resolve(__dirname, 'src/scripts/sw.js'),
+
   },
   output: {
     filename: '[name].bundle.js',
@@ -100,7 +103,29 @@ module.exports = {
       ],
       overrideExtension: true,
     }),
+    new WorkboxWebpackPlugin.GenerateSW({
+      swDest: './service-worker/sw.bundle.js', // Changed to a unique path
+    }),
     new CleanWebpackPlugin(),
     new BundleAnalyzerPlugin(),
+    new WorkboxWebpackPlugin.GenerateSW({
+      swDest: './sw-other.bundle.js', // Changed to a unique name
+      runtimeCaching: [
+        {
+          urlPattern: ({ url }) => url.href.startsWith('http://localhost:5000/'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'greenEconomy',
+          },
+        },
+        {
+          urlPattern: ({ url }) => url.href.startsWith('http://localhost:5000/url/'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'greenEconomy',
+          },
+        },
+      ],
+    }),
   ],
 };
