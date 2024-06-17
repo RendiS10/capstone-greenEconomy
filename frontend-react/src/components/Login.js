@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import '../styles/styles.css'; // Make sure this points to your CSS file
 
 const Login = () => {
@@ -16,19 +17,58 @@ const Login = () => {
         username,
         password
       });
-      localStorage.setItem('token', response.data.token);
-      navigate('/');
+      if (response.data.token) {
+        localStorage.setItem('token', response.data.token);
+        Swal.fire({
+          icon: 'success',
+          title: 'Login Berhasil!',
+          text: 'Anda telah berhasil login.',
+        }).then(() => {
+          navigate('/');
+        });
+      } else {
+        throw new Error('No token received');
+      }
     } catch (error) {
-      // Menangkap error dari response dan menampilkan pesan yang sesuai
-      setError('Nama pengguna atau kata sandi salah');
       console.error('Login failed:', error);
+      if (error.response && error.response.data) {
+        if (error.response.data.error === 'User not found') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Gagal Login',
+            text: 'Username tidak ditemukan!',
+          });
+          setError('Username tidak ditemukan');
+        } else if (error.response.data.error === 'Invalid password') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Gagal Login',
+            text: 'Password tidak sesuai!',
+          });
+          setError('Password tidak sesuai');
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Gagal Login',
+            text: 'Login gagal, silakan coba lagi.',
+          });
+          setError('Login gagal, silakan coba lagi');
+        }
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Gagal Login',
+          text: 'Terjadi kesalahan, silakan coba lagi.',
+        });
+        setError('Terjadi kesalahan, silakan coba lagi');
+      }
     }
   };
 
   return (
     <div className="login-container">
       <div className="login-box">
-        <h2 className="login-title">Login Admin</h2>
+        <h2 className="login-title"><b><i>LOGIN ADMIN</i></b></h2>
         <form onSubmit={handleLogin}>
           <div className="field">
             <label className="label">Nama Pengguna atau Alamat Email</label>
@@ -66,10 +106,10 @@ const Login = () => {
             </div>
           </div>
         </form>
-        <p className="login-note">Login sementara untuk admin</p>
+        <p className="login-note"><i>login sementara hanya untuk admin !</i></p>
       </div>
       <div className="login-image">
-        <img src="../img/img_login.jpeg" alt="Login Illustration" />
+        <img src="../img/img_login.jpeg" alt="" />
       </div>
     </div>
   );
