@@ -14,5 +14,16 @@
 <h5 style="margin-left:5px;">1. F1716YB172 – Muhammad Fikriansyah J.P </h5>
 <h5>2. F2966YB395 – Ericko Wicaksono </h5>
 <h5>4. F1716YB173 Rendi Sutendi</h5>
+<br>
+<br>
+<ol><b>langkah langkah menjalankan website <b/></ol>
+<li>install semua npm pada masing masing folder</li>
+<li>nyalakan database mysql</li>
+<li>untuk menjalankan backend ketik "nodemon index" pada terminal yang telah tertuju pada folder backend, alternatif install nodemon dengan cara "npm i nodemon"</li>
+<li>untuk menjalankan frontend atau halaman admin ketik "npm run start" pada terminal yang telah tertuju pada directory frontend
+</li>
+<li>untuk menjalankan src atau halaman user ketik "npm run start-dev" pada terminal yang telah tertuju pada directory src
+</li>
+
 
 
