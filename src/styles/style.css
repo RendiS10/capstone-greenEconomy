@@ -23,10 +23,11 @@ body {
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 10px;
-  position: sticky;
+  position: fixed; /* Changed from sticky to fixed */
   top: 0;
   z-index: 99;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  width: 100%; /* Added full width */
 }
  
 .app-bar .app-bar__menu {
@@ -63,6 +64,8 @@ body {
   padding: 8px;
   background-color: white;
   overflow: hidden;
+  margin-left: 20px; /* Added margin to the left */
+  margin-right: 20px; /* Added margin to the right */
 }
  
 .app-bar .app-bar__navigation.open {
