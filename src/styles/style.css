@@ -614,6 +614,7 @@ footer .bawah{
 /* Halaman Detail */
 
 .detail{
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   gap: 3rem;
