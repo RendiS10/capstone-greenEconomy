@@ -617,6 +617,7 @@ footer .bawah{
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  margin-top: 100px;
 }
 .detail h2{
   display: flex;
